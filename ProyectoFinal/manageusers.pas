@@ -62,9 +62,7 @@ begin
           end
           else
           begin
-            xdatos.tUsuario.Edit;
             xdatos.tUsuario.Delete;
-            xdatos.tUsuario.Post;
             ShowMessage('Usuario Borrado correctamente');
 
 

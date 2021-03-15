@@ -19,12 +19,13 @@ object xdatos: Txdatos
       'Password=admin'
       'User_Name=root'
       'DriverID=MySQL')
+    Connected = True
     LoginPrompt = False
     Left = 48
     Top = 56
   end
   object mysqlLib: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\GitHub\IncidenciasTic\ProyectoFinal\lib\libmySQL.dll'
+    VendorLib = 'C:\Users\Admin\Desktop\ProyectoFinal\lib\libmySQL.dll'
     Left = 104
     Top = 56
   end
