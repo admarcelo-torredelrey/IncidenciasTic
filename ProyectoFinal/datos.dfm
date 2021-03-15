@@ -21,21 +21,21 @@ object xdatos: Txdatos
       'DriverID=MySQL')
     Connected = True
     LoginPrompt = False
-    Left = 48
-    Top = 56
+    Left = 24
+    Top = 8
   end
   object mysqlLib: TFDPhysMySQLDriverLink
     VendorLib = 'C:\GitHub\IncidenciasTic\ProyectoFinal\lib\libmySQL.dll'
-    Left = 104
-    Top = 56
+    Left = 80
+    Top = 8
   end
   object tUsuario: TFDTable
     IndexFieldNames = 'id'
     Connection = dbincidencias
     UpdateOptions.UpdateTableName = 'incidencias.usuario'
     TableName = 'incidencias.usuario'
-    Left = 32
-    Top = 120
+    Left = 16
+    Top = 64
     object tUsuarioid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -61,16 +61,16 @@ object xdatos: Txdatos
   end
   object dtUsuario: TDataSource
     DataSet = tUsuario
-    Left = 104
-    Top = 120
+    Left = 88
+    Top = 64
   end
   object tTipoUsuarios: TFDTable
     IndexFieldNames = 'id'
     Connection = dbincidencias
     UpdateOptions.UpdateTableName = 'incidencias.tipousuario'
     TableName = 'incidencias.tipousuario'
-    Left = 32
-    Top = 192
+    Left = 16
+    Top = 120
     object tTipoUsuariosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -84,7 +84,37 @@ object xdatos: Txdatos
   end
   object dtTipoUsuarios: TDataSource
     DataSet = tTipoUsuarios
-    Left = 104
-    Top = 192
+    Left = 88
+    Top = 120
+  end
+  object tAulas: TFDTable
+    IndexFieldNames = 'id'
+    Connection = dbincidencias
+    UpdateOptions.UpdateTableName = 'incidencias.aula'
+    TableName = 'incidencias.aula'
+    Left = 16
+    Top = 176
+    object tAulasid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tAulasnombre: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nombre'
+      Origin = 'nombre'
+      Size = 30
+    end
+    object tAulasubicacion: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'ubicacion'
+      Origin = 'ubicacion'
+      Size = 30
+    end
+  end
+  object dtAulas: TDataSource
+    DataSet = tAulas
+    Left = 88
+    Top = 176
   end
 end

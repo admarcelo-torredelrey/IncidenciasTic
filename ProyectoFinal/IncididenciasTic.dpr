@@ -5,8 +5,8 @@ uses
   login in 'login.pas' {xlogin},
   datos in 'datos.pas' {xdatos},
   menuprincipal in 'menuprincipal.pas' {xmainmenu},
-  manageusers in 'manageusers.pas' {xmanageusers};
-
+  manageusers in 'manageusers.pas' {xmanageusers},
+  aulas in 'aulas.pas' {xAulas};
 
 {$R *.res}
 
@@ -17,5 +17,6 @@ begin
   Application.CreateForm(Txdatos, xdatos);
   Application.CreateForm(Txmainmenu, xmainmenu);
   Application.CreateForm(Txmanageusers, xmanageusers);
+  Application.CreateForm(TxAulas, xAulas);
   Application.Run;
 end.

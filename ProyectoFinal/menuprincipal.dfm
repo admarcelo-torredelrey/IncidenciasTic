@@ -2214,4 +2214,13 @@ object xmainmenu: Txmainmenu
     Height = 13
     Visible = False
   end
+  object btnGestionAulas: TButton
+    Left = 80
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'Gesti'#243'nAulas'
+    TabOrder = 0
+    OnClick = btnGestionAulasClick
+  end
 end

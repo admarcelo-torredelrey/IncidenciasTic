@@ -1,0 +1,25 @@
+unit aulas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,datos, Data.DB, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TxAulas = class(TForm)
+    gridAulas: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  xAulas: TxAulas;
+
+implementation
+
+{$R *.dfm}
+
+end.

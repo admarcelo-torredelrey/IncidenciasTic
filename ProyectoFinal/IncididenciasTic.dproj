@@ -113,6 +113,10 @@
         <DCCReference Include="manageusers.pas">
             <Form>xmanageusers</Form>
         </DCCReference>
+        <DCCReference Include="aulas.pas">
+            <Form>xAulas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

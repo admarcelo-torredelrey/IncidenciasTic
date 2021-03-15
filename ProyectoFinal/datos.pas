@@ -25,6 +25,11 @@ type
     dtTipoUsuarios: TDataSource;
     tTipoUsuariosid: TFDAutoIncField;
     tTipoUsuariostipo: TStringField;
+    tAulas: TFDTable;
+    dtAulas: TDataSource;
+    tAulasid: TFDAutoIncField;
+    tAulasnombre: TStringField;
+    tAulasubicacion: TStringField;
   private
     { Private declarations }
   public

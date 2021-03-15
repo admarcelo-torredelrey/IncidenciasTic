@@ -12,9 +12,11 @@ type
     imgUserIcon: TImage;
     imgLogout: TImage;
     lblid: TLabel;
+    btnGestionAulas: TButton;
     procedure imgLogoutClick(Sender: TObject);
     procedure imgUserIconClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnGestionAulasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,7 +30,12 @@ implementation
 
 {$R *.dfm}
 
-uses login, manageusers;
+uses login, manageusers, aulas;
+
+procedure Txmainmenu.btnGestionAulasClick(Sender: TObject);
+begin
+      xAulas.showmodal;
+end;
 
 procedure Txmainmenu.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
