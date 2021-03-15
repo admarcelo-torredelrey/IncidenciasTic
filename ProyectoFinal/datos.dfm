@@ -19,6 +19,7 @@ object xdatos: Txdatos
       'Password=admin'
       'User_Name=root'
       'DriverID=MySQL')
+    Connected = True
     LoginPrompt = False
     Left = 48
     Top = 56
@@ -61,6 +62,29 @@ object xdatos: Txdatos
   object dtUsuario: TDataSource
     DataSet = tUsuario
     Left = 104
-    Top = 128
+    Top = 120
+  end
+  object tTipoUsuarios: TFDTable
+    IndexFieldNames = 'id'
+    Connection = dbincidencias
+    UpdateOptions.UpdateTableName = 'incidencias.tipousuario'
+    TableName = 'incidencias.tipousuario'
+    Left = 32
+    Top = 192
+    object tTipoUsuariosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tTipoUsuariostipo: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'tipo'
+      Origin = 'tipo'
+    end
+  end
+  object dtTipoUsuarios: TDataSource
+    DataSet = tTipoUsuarios
+    Left = 104
+    Top = 192
   end
 end

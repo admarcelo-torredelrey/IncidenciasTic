@@ -21,6 +21,10 @@ type
     tUsuariopassword: TStringField;
     dtUsuario: TDataSource;
     tUsuariotipo: TStringField;
+    tTipoUsuarios: TFDTable;
+    dtTipoUsuarios: TDataSource;
+    tTipoUsuariosid: TFDAutoIncField;
+    tTipoUsuariostipo: TStringField;
   private
     { Private declarations }
   public

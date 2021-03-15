@@ -35,6 +35,7 @@ type
     procedure lblCreateUserClick(Sender: TObject);
     procedure lblDeleteUserClick(Sender: TObject);
     procedure btnBorrarClick(Sender: TObject);
+    procedure btnCreateUserClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -154,6 +155,27 @@ begin
     txtNewPassword.Text:='';
 end;
 
+procedure Txmanageusers.btnCreateUserClick(Sender: TObject);
+begin
+        if xdatos.tUsuario.Locate('username',txtUsername.Text) then
+        begin
+          ShowMessage('Ya existe un usuario con ese nombre, indique otro');
+        end
+        else
+        begin
+
+
+            xdatos.tUsuario.Append;
+            xdatos.tUsuariousername.Value:=txtUsername.Text;
+            xdatos.tUsuariotipo.Value:=cbxTipo.Text;
+            xdatos.tUsuario.Post;
+
+            ShowMessage('El usuario '+txtUsername.Text+' ha sido creado correctamente');
+
+
+        end;
+end;
+
 procedure Txmanageusers.btnVolverClick(Sender: TObject);
 begin
       ModalResult:=mrok;
@@ -217,6 +239,7 @@ begin
     txtUsername.Visible:=false;
     cbxTipo.Visible:=false;
     btnCreateUser.Visible:=false;
+    lblCreateUser.Visible:=false;
 
 end;
 
@@ -274,6 +297,23 @@ begin
       cbxTipo.Visible:=true;
       btnCreateUser.Visible:=true;
 
+      xdatos.tTipoUsuarios.open;
+
+
+      cbxTipo.items.Clear;
+      xdatos.tTipoUsuarios.First;
+
+      while not xdatos.tTipoUsuarios.Eof do
+      begin
+          cbxTipo.Items.Add(xdatos.tTipoUsuariostipo.Value);
+          xdatos.tTipoUsuarios.Next;
+
+      end;
+
+      cbxTipo.ItemIndex:=0;
+
+
+      xdatos.tTipoUsuarios.Close;
 end;
 
 procedure Txmanageusers.lblDeleteUserClick(Sender: TObject);

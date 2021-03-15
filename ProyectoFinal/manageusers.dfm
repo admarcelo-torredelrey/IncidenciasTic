@@ -214,6 +214,7 @@ object xmanageusers: Txmanageusers
     ParentFont = False
     TabOrder = 6
     Visible = False
+    OnClick = btnCreateUserClick
   end
   object cbxDeleteUser: TComboBox
     Left = 272
