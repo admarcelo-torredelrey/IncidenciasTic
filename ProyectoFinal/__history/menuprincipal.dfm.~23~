@@ -13,6 +13,7 @@ object xmainmenu: Txmainmenu
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object imgUserIcon: TImage
@@ -1787,6 +1788,7 @@ object xmainmenu: Txmainmenu
       7407B9C1F8A067444F7022381A04A5C1FE60E2D73565CC89C611D5BB0BC7B71D
       EB1ED5C41D2100A9FBFF4BEC18169A2156D10000000049454E44AE426082}
     Proportional = True
+    OnClick = imgUserIconClick
   end
   object imgLogout: TImage
     Left = 638
@@ -2204,5 +2206,21 @@ object xmainmenu: Txmainmenu
       82}
     Proportional = True
     OnClick = imgLogoutClick
+  end
+  object lblid: TLabel
+    Left = 631
+    Top = 24
+    Width = 3
+    Height = 13
+    Visible = False
+  end
+  object btnGestionAulas: TButton
+    Left = 80
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'Gesti'#243'nAulas'
+    TabOrder = 0
+    OnClick = btnGestionAulasClick
   end
 end
