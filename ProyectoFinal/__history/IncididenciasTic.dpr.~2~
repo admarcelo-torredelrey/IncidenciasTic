@@ -1,0 +1,14 @@
+program IncididenciasTic;
+
+uses
+  Vcl.Forms,
+  login in 'login.pas' {xlogin};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Txlogin, xlogin);
+  Application.Run;
+end.

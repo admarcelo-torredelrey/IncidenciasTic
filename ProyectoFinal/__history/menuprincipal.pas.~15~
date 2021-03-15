@@ -1,0 +1,38 @@
+unit menuprincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls;
+
+type
+  Txmainmenu = class(TForm)
+    imgUserIcon: TImage;
+    imgLogout: TImage;
+    procedure imgLogoutClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  xmainmenu: Txmainmenu;
+
+implementation
+
+{$R *.dfm}
+
+uses login;
+
+procedure Txmainmenu.imgLogoutClick(Sender: TObject);
+begin
+    xlogin.Visible:=true;
+    xlogin.txtUsername.text:='';
+    xlogin.txtPassword.text:='';
+    ModalResult:= mrok;
+end;
+
+end.
