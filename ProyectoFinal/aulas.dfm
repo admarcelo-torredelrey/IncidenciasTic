@@ -15,8 +15,8 @@ object xAulas: TxAulas
   PixelsPerInch = 96
   TextHeight = 13
   object gridAulas: TDBGrid
-    Left = 64
-    Top = 40
+    Left = 63
+    Top = 64
     Width = 569
     Height = 161
     DataSource = xdatos.dtAulas
@@ -29,11 +29,38 @@ object xAulas: TxAulas
   end
   object navegador: TDBNavigator
     Left = 64
-    Top = 207
-    Width = 536
-    Height = 74
+    Top = 231
+    Width = 568
+    Height = 34
     DataSource = xdatos.dtAulas
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbPost, nbCancel, nbRefresh]
     TabOrder = 1
+  end
+  object btnConsultar: TButton
+    Left = 456
+    Top = 288
+    Width = 121
+    Height = 49
+    Caption = 'CONSULTAR'
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 136
+    Top = 288
+    Width = 121
+    Height = 49
+    Caption = 'ALTA'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object btnVolver: TButton
+    Left = 608
+    Top = 0
+    Width = 89
+    Height = 41
+    Caption = 'Volver'
+    Style = bsCommandLink
+    TabOrder = 4
+    OnClick = btnVolverClick
   end
 end

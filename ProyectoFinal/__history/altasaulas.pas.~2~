@@ -1,0 +1,36 @@
+unit altasaulas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TxAltasAulas = class(TForm)
+    cbxUbicacion: TComboBox;
+    txtNombreAula: TEdit;
+    lblNombre: TLabel;
+    lblUbicacion: TLabel;
+    btnCrearAula: TButton;
+    btnVolver: TButton;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  xAltasAulas: TxAltasAulas;
+
+implementation
+
+{$R *.dfm}
+
+procedure TxAltasAulas.FormCreate(Sender: TObject);
+begin
+    modalResult:=mrok;
+end;
+
+end.

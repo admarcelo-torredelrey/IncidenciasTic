@@ -2229,4 +2229,18 @@ object xmainmenu: Txmainmenu
     TabOrder = 0
     OnClick = btnGestionAulasClick
   end
+  object btnIncidencias: TButton
+    Left = 56
+    Top = 120
+    Width = 337
+    Height = 41
+    Caption = 'Gesti'#243'n Incidencias'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
 end

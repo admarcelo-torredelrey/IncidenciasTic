@@ -13,6 +13,7 @@ type
     imgLogout: TImage;
     lblid: TLabel;
     btnGestionAulas: TButton;
+    btnIncidencias: TButton;
     procedure imgLogoutClick(Sender: TObject);
     procedure imgUserIconClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

@@ -117,6 +117,10 @@
             <Form>xAulas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="altasaulas.pas">
+            <Form>xAltasAulas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
