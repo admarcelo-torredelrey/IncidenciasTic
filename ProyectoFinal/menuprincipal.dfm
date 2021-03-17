@@ -2243,4 +2243,13 @@ object xmainmenu: Txmainmenu
     ParentFont = False
     TabOrder = 1
   end
+  object btnEquipos: TButton
+    Left = 280
+    Top = 240
+    Width = 75
+    Height = 25
+    Caption = 'Gestion Equipos'
+    TabOrder = 2
+    OnClick = btnEquiposClick
+  end
 end

@@ -14,10 +14,12 @@ type
     lblid: TLabel;
     btnGestionAulas: TButton;
     btnIncidencias: TButton;
+    btnEquipos: TButton;
     procedure imgLogoutClick(Sender: TObject);
     procedure imgUserIconClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnGestionAulasClick(Sender: TObject);
+    procedure btnEquiposClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +33,12 @@ implementation
 
 {$R *.dfm}
 
-uses login, manageusers, aulas;
+uses login, manageusers, aulas, gestionequipos;
+
+procedure Txmainmenu.btnEquiposClick(Sender: TObject);
+begin
+    xgestionequipo.showmodal;
+end;
 
 procedure Txmainmenu.btnGestionAulasClick(Sender: TObject);
 begin

@@ -75,6 +75,7 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object tTipoUsuariostipo: TStringField
       AutoGenerateValue = arDefault
@@ -98,6 +99,7 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object tAulasnombre: TStringField
       AutoGenerateValue = arDefault
@@ -116,5 +118,46 @@ object xdatos: Txdatos
     DataSet = tAulas
     Left = 88
     Top = 176
+  end
+  object tEquipos: TFDTable
+    IndexFieldNames = 'id'
+    Connection = dbincidencias
+    UpdateOptions.UpdateTableName = 'incidencias.equipamento'
+    TableName = 'incidencias.equipamento'
+    Left = 16
+    Top = 240
+    object tEquiposid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tEquiposnombre: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nombre'
+      Origin = 'nombre'
+      Size = 50
+    end
+    object tEquiposdescripcion: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'descripcion'
+      Origin = 'descripcion'
+      Size = 100
+    end
+    object tEquiposubicacion: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'ubicacion'
+      Origin = 'ubicacion'
+      Size = 30
+    end
+    object tEquiposfecha: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'fecha'
+      Origin = 'fecha'
+    end
+  end
+  object dsEquipos: TDataSource
+    DataSet = tEquipos
+    Left = 88
+    Top = 240
   end
 end

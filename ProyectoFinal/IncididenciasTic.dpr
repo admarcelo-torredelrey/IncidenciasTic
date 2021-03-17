@@ -7,7 +7,8 @@ uses
   menuprincipal in 'menuprincipal.pas' {xmainmenu},
   manageusers in 'manageusers.pas' {xmanageusers},
   aulas in 'aulas.pas' {xAulas},
-  altasaulas in 'altasaulas.pas' {xAltasAulas};
+  altasaulas in 'altasaulas.pas' {xAltasAulas},
+  gestionequipos in 'gestionequipos.pas' {xgestionequipo};
 
 {$R *.res}
 
@@ -20,5 +21,6 @@ begin
   Application.CreateForm(Txmanageusers, xmanageusers);
   Application.CreateForm(TxAulas, xAulas);
   Application.CreateForm(TxAltasAulas, xAltasAulas);
+  Application.CreateForm(Txgestionequipo, xgestionequipo);
   Application.Run;
 end.

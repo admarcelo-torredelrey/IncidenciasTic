@@ -30,6 +30,13 @@ type
     tAulasid: TFDAutoIncField;
     tAulasnombre: TStringField;
     tAulasubicacion: TStringField;
+    tEquipos: TFDTable;
+    dsEquipos: TDataSource;
+    tEquiposid: TFDAutoIncField;
+    tEquiposnombre: TStringField;
+    tEquiposdescripcion: TStringField;
+    tEquiposubicacion: TStringField;
+    tEquiposfecha: TDateField;
   private
     { Private declarations }
   public
