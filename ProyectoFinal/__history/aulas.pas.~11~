@@ -77,8 +77,6 @@ end;
 procedure TxAulas.imgDeleteClick(Sender: TObject);
 begin
   xdatos.tAulas.Delete;
-  txtNombre.Text:=xdatos.tAulasnombre.Value;
-  cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
 end;
 
 procedure TxAulas.imgLastClick(Sender: TObject);

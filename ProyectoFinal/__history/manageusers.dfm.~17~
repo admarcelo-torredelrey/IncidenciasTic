@@ -121,7 +121,6 @@ object xmanageusers: Txmanageusers
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
-    MaxLength = 20
     ParentFont = False
     PasswordChar = '*'
     TabOrder = 0
@@ -169,7 +168,6 @@ object xmanageusers: Txmanageusers
     Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = []
-    MaxLength = 30
     ParentFont = False
     TabOrder = 3
     Visible = False
@@ -184,7 +182,6 @@ object xmanageusers: Txmanageusers
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
-    MaxLength = 30
     ParentFont = False
     TabOrder = 4
     Visible = False
@@ -199,7 +196,6 @@ object xmanageusers: Txmanageusers
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
-    MaxLength = 20
     ParentFont = False
     TabOrder = 5
     Visible = False
@@ -230,7 +226,6 @@ object xmanageusers: Txmanageusers
     Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = []
-    MaxLength = 30
     ParentFont = False
     TabOrder = 7
     Visible = False

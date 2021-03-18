@@ -32,7 +32,6 @@ type
     procedure imgLastClick(Sender: TObject);
     procedure imgPostClick(Sender: TObject);
     procedure imgDeleteClick(Sender: TObject);
-    procedure gridAulasCellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -68,17 +67,9 @@ begin
     end;
 end;
 
-procedure TxAulas.gridAulasCellClick(Column: TColumn);
-begin
-  txtNombre.Text:=xdatos.tAulasnombre.Value;
-  cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
-end;
-
 procedure TxAulas.imgDeleteClick(Sender: TObject);
 begin
   xdatos.tAulas.Delete;
-  txtNombre.Text:=xdatos.tAulasnombre.Value;
-  cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
 end;
 
 procedure TxAulas.imgLastClick(Sender: TObject);
@@ -97,23 +88,8 @@ end;
 
 procedure TxAulas.imgPostClick(Sender: TObject);
 begin
-
-  if (txtNombre.Text='') or (cbxUbicación.Text='') then
-  begin
-
-    ShowMessage('No debes dejar campos vacios!');
-
-  end
-  else
-  begin
   xdatos.tAulas.Edit;
-  xdatos.tAulasnombre.Value:=txtNombre.Text;
-  xdatos.tAulasubicacion.Value:=cbxUbicación.Text;
-
   xdatos.tAulas.Post;
-
-  end;
-
 end;
 
 procedure TxAulas.imgPreviousClick(Sender: TObject);

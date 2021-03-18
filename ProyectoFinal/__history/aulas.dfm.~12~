@@ -1,9 +1,9 @@
-object xgestionequipo: Txgestionequipo
+﻿object xAulas: TxAulas
   Left = 0
   Top = 0
-  Caption = 'Gesti'#243'n Equipos'
-  ClientHeight = 462
-  ClientWidth = 880
+  Caption = 'Gesti'#243'n De Aulas'
+  ClientHeight = 406
+  ClientWidth = 858
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -2875,8 +2875,8 @@ object xgestionequipo: Txgestionequipo
     OnClick = imgDeleteClick
   end
   object lblNombre: TLabel
-    Left = 32
-    Top = 160
+    Left = 48
+    Top = 184
     Width = 45
     Height = 16
     Caption = 'Nombre'
@@ -2887,21 +2887,8 @@ object xgestionequipo: Txgestionequipo
     Font.Style = []
     ParentFont = False
   end
-  object lblDescripcion: TLabel
-    Left = 32
-    Top = 200
-    Width = 65
-    Height = 16
-    Caption = 'Descripci'#243'n'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
   object lblUbicacion: TLabel
-    Left = 32
+    Left = 48
     Top = 240
     Width = 54
     Height = 16
@@ -2913,108 +2900,81 @@ object xgestionequipo: Txgestionequipo
     Font.Style = []
     ParentFont = False
   end
-  object lblFecha: TLabel
-    Left = 32
-    Top = 280
-    Width = 78
-    Height = 16
-    Caption = 'Fecha de Alta'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
-  object gridEquipos: TDBGrid
-    Left = 331
-    Top = 269
-    Width = 541
-    Height = 185
-    DataSource = xdatos.dsEquipos
-    ReadOnly = True
+  object gridAulas: TDBGrid
+    Left = 394
+    Top = 237
+    Width = 456
+    Height = 161
+    DataSource = xdatos.dtAulas
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnCellClick = gridEquiposCellClick
     Columns = <
       item
         Expanded = False
         FieldName = 'id'
-        Width = 20
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nombre'
-        Width = 120
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'descripcion'
-        Width = 200
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'ubicacion'
-        Width = 100
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'fecha'
-        Width = 80
+        Width = 64
         Visible = True
       end>
   end
-  object txtNombre: TEdit
-    Left = 128
-    Top = 159
-    Width = 145
-    Height = 21
-    MaxLength = 50
+  object btnConsultar: TButton
+    Left = 568
+    Top = 9
+    Width = 121
+    Height = 49
+    Caption = 'CONSULTAR'
     TabOrder = 1
   end
-  object txtDescripcion: TEdit
-    Left = 128
-    Top = 199
-    Width = 185
-    Height = 21
-    MaxLength = 100
+  object Button1: TButton
+    Left = 376
+    Top = 9
+    Width = 121
+    Height = 49
+    Caption = 'ALTA'
     TabOrder = 2
-  end
-  object txtUbicacion: TEdit
-    Left = 128
-    Top = 239
-    Width = 145
-    Height = 21
-    Enabled = False
-    MaxLength = 30
-    ReadOnly = True
-    TabOrder = 3
-  end
-  object txtFecha: TEdit
-    Left = 128
-    Top = 279
-    Width = 145
-    Height = 21
-    Enabled = False
-    ReadOnly = True
-    TabOrder = 4
+    OnClick = Button1Click
   end
   object btnVolver: TButton
-    Left = 800
+    Left = 761
     Top = 0
     Width = 89
     Height = 41
     Caption = 'Volver'
     Style = bsCommandLink
-    TabOrder = 5
+    TabOrder = 3
     OnClick = btnVolverClick
+  end
+  object cbxUbicación: TComboBox
+    Left = 128
+    Top = 237
+    Width = 145
+    Height = 21
+    ItemIndex = 0
+    TabOrder = 4
+    Text = 'Planta baja'
+    Items.Strings = (
+      'Planta baja'
+      'Primera planta'
+      'Segunda planta')
+  end
+  object txtNombre: TEdit
+    Left = 128
+    Top = 184
+    Width = 145
+    Height = 21
+    TabOrder = 5
   end
 end

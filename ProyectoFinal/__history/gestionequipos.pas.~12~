@@ -56,16 +56,6 @@ end;
 procedure Txgestionequipo.FormActivate(Sender: TObject);
 begin
     xdatos.tEquipos.Open();
-
-    if not xdatos.tEquipos.Eof then
-    begin
-
-    txtNombre.Text:=xdatos.tEquiposnombre.Value;
-    txtDescripcion.Text:=xdatos.tEquiposdescripcion.Value;
-    txtUbicacion.Text:=xdatos.tEquiposubicacion.Value;
-    txtFecha.Text:=DateToStr(xdatos.tEquiposfecha.Value);
-
-    end;
 end;
 
 procedure Txgestionequipo.gridEquiposCellClick(Column: TColumn);
