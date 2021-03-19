@@ -8,7 +8,8 @@ uses
   manageusers in 'manageusers.pas' {xmanageusers},
   aulas in 'aulas.pas' {xAulas},
   altasaulas in 'altasaulas.pas' {xAltasAulas},
-  gestionequipos in 'gestionequipos.pas' {xgestionequipo};
+  gestionequipos in 'gestionequipos.pas' {xgestionequipo},
+  trasladoequipo in 'trasladoequipo.pas' {xTraslado};
 
 {$R *.res}
 
@@ -22,5 +23,6 @@ begin
   Application.CreateForm(TxAulas, xAulas);
   Application.CreateForm(TxAltasAulas, xAltasAulas);
   Application.CreateForm(Txgestionequipo, xgestionequipo);
+  Application.CreateForm(TxTraslado, xTraslado);
   Application.Run;
 end.

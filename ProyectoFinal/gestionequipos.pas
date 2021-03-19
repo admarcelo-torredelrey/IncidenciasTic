@@ -25,6 +25,7 @@ type
     txtUbicacion: TEdit;
     txtFecha: TEdit;
     btnVolver: TButton;
+    imgMove: TImage;
     procedure FormActivate(Sender: TObject);
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);

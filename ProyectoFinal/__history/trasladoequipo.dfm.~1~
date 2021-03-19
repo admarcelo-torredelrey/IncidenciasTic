@@ -1,0 +1,26 @@
+object xTraslado: TxTraslado
+  Left = 0
+  Top = 0
+  Caption = 'Trasladar Equipo'
+  ClientHeight = 289
+  ClientWidth = 670
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnVolver: TButton
+    Left = 587
+    Top = 0
+    Width = 86
+    Height = 41
+    Caption = 'Volver'
+    Style = bsCommandLink
+    TabOrder = 0
+    OnClick = btnVolverClick
+  end
+end
