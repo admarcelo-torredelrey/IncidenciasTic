@@ -37,6 +37,13 @@ type
     tEquiposdescripcion: TStringField;
     tEquiposubicacion: TStringField;
     tEquiposfecha: TDateField;
+    tTraslado: TFDTable;
+    tTrasladoid: TFDAutoIncField;
+    tTrasladoequipo: TStringField;
+    tTrasladoorigen: TStringField;
+    tTrasladodestino: TStringField;
+    tTrasladofecha: TDateField;
+    dsTraslado: TDataSource;
   private
     { Private declarations }
   public

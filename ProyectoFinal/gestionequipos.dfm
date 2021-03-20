@@ -3230,6 +3230,7 @@ object xgestionequipo: Txgestionequipo
       0800C01082080080104400008610440000842002003084200200200411008021
       FF0FD8464E1F5D64BAC10000000049454E44AE426082}
     Proportional = True
+    OnClick = imgMoveClick
   end
   object gridEquipos: TDBGrid
     Left = 331

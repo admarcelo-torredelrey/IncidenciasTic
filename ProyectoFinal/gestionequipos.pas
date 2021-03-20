@@ -36,6 +36,7 @@ type
     procedure imgDeleteClick(Sender: TObject);
     procedure gridEquiposCellClick(Column: TColumn);
     procedure btnVolverClick(Sender: TObject);
+    procedure imgMoveClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +49,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses trasladoequipo;
 
 procedure Txgestionequipo.btnVolverClick(Sender: TObject);
 begin
@@ -100,6 +103,13 @@ end;
 procedure Txgestionequipo.imgModifyClick(Sender: TObject);
 begin
   xdatos.tEquipos.Edit;
+end;
+
+procedure Txgestionequipo.imgMoveClick(Sender: TObject);
+begin
+    xTraslado.lblEquipo.Caption:='Equipo: '+xdatos.tEquiposnombre.Value+' '+xdatos.tEquiposdescripcion.Value;
+    xTraslado.showmodal;
+
 end;
 
 procedure Txgestionequipo.imgNextClick(Sender: TObject);

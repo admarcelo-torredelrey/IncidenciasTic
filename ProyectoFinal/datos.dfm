@@ -130,6 +130,7 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object tEquiposnombre: TStringField
       AutoGenerateValue = arDefault
@@ -159,5 +160,46 @@ object xdatos: Txdatos
     DataSet = tEquipos
     Left = 88
     Top = 240
+  end
+  object tTraslado: TFDTable
+    IndexFieldNames = 'id'
+    Connection = dbincidencias
+    UpdateOptions.UpdateTableName = 'traslado'
+    TableName = 'traslado'
+    Left = 16
+    Top = 296
+    object tTrasladoid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tTrasladoequipo: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'equipo'
+      Origin = 'equipo'
+      Size = 50
+    end
+    object tTrasladoorigen: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'origen'
+      Origin = 'origen'
+      Size = 30
+    end
+    object tTrasladodestino: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'destino'
+      Origin = 'destino'
+      Size = 30
+    end
+    object tTrasladofecha: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'fecha'
+      Origin = 'fecha'
+    end
+  end
+  object dsTraslado: TDataSource
+    DataSet = tTraslado
+    Left = 88
+    Top = 296
   end
 end

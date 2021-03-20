@@ -1,0 +1,67 @@
+unit trasladoequipo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,datos, Vcl.ComCtrls;
+
+type
+  TxTraslado = class(TForm)
+    btnVolver: TButton;
+    cbxOrigen: TComboBox;
+    cbxDestino: TComboBox;
+    lblOrigen: TLabel;
+    lblDestino: TLabel;
+    btnTrasladar: TButton;
+    dtFechaTraslado: TDateTimePicker;
+    lblFecha: TLabel;
+    procedure btnVolverClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure btnTrasladarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  xTraslado: TxTraslado;
+
+implementation
+
+{$R *.dfm}
+
+procedure TxTraslado.btnTrasladarClick(Sender: TObject);
+begin
+    ShowMessage(dtFechaTraslado);
+end;
+
+procedure TxTraslado.btnVolverClick(Sender: TObject);
+begin
+  ModalResult:=mrok;
+end;
+
+procedure TxTraslado.FormActivate(Sender: TObject);
+begin
+      xdatos.tAulas.Open();
+
+      xdatos.tAulas.First;
+
+      cbxOrigen.Items.Clear;
+      cbxDestino.Items.Clear;
+
+      while not xdatos.tAulas.Eof do
+      begin
+        cbxOrigen.Items.Add(xdatos.tAulasnombre.Value);
+        cbxDestino.Items.Add(xdatos.tAulasnombre.Value);
+        xdatos.tAulas.Next;
+      end;
+
+      cbxOrigen.ItemIndex:=0;
+      cbxDestino.ItemIndex:=0;
+
+
+end;
+
+end.
