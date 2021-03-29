@@ -2,8 +2,8 @@ object xdatos: Txdatos
   Left = 0
   Top = 0
   Caption = 'DATOS'
-  ClientHeight = 536
-  ClientWidth = 642
+  ClientHeight = 425
+  ClientWidth = 575
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -172,7 +172,6 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
-      ReadOnly = True
     end
     object tTrasladoequipo: TStringField
       AutoGenerateValue = arDefault
@@ -202,52 +201,5 @@ object xdatos: Txdatos
     DataSet = tTraslado
     Left = 88
     Top = 296
-  end
-  object tIncidencias: TFDTable
-    IndexFieldNames = 'id'
-    Connection = dbincidencias
-    UpdateOptions.UpdateTableName = 'incidencias.incidencia'
-    TableName = 'incidencias.incidencia'
-    Left = 16
-    Top = 352
-    object tIncidenciasid: TFDAutoIncField
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInWhere, pfInKey]
-    end
-    object tIncidenciasaula: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'aula'
-      Origin = 'aula'
-      Size = 30
-    end
-    object tIncidenciasequipamiento: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'equipamiento'
-      Origin = 'equipamiento'
-      Size = 250
-    end
-    object tIncidenciasfecha: TDateField
-      AutoGenerateValue = arDefault
-      FieldName = 'fecha'
-      Origin = 'fecha'
-    end
-    object tIncidenciasprofesor: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'profesor'
-      Origin = 'profesor'
-      Size = 30
-    end
-    object tIncidenciasestado: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'estado'
-      Origin = 'estado'
-      Size = 30
-    end
-  end
-  object dsIncidencias: TDataSource
-    DataSet = tIncidencias
-    Left = 88
-    Top = 352
   end
 end

@@ -44,14 +44,6 @@ type
     tTrasladodestino: TStringField;
     tTrasladofecha: TDateField;
     dsTraslado: TDataSource;
-    tIncidencias: TFDTable;
-    dsIncidencias: TDataSource;
-    tIncidenciasid: TFDAutoIncField;
-    tIncidenciasaula: TStringField;
-    tIncidenciasequipamiento: TStringField;
-    tIncidenciasfecha: TDateField;
-    tIncidenciasprofesor: TStringField;
-    tIncidenciasestado: TStringField;
   private
     { Private declarations }
   public
