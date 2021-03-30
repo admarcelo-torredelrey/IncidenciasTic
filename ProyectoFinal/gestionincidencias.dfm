@@ -870,6 +870,7 @@ object xgestionIncidencias: TxgestionIncidencias
       00E30180F100C07800603C00301E00180F008C0700C60300E30180F100C07800
       603C00301E0018EF7FBB3EE1978EF0FA220000000049454E44AE426082}
     Proportional = True
+    OnClick = imgPostClick
   end
   object imgDelete: TImage
     Left = 231
@@ -2944,6 +2945,7 @@ object xgestionIncidencias: TxgestionIncidencias
     Width = 543
     Height = 217
     DataSource = xdatos.dsIncidencias
+    ReadOnly = True
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -3002,26 +3004,32 @@ object xgestionIncidencias: TxgestionIncidencias
     Height = 21
     TabOrder = 2
   end
-  object txtFecha: TEdit
-    Left = 136
-    Top = 240
-    Width = 121
-    Height = 21
-    TabOrder = 3
-  end
   object txtProfesor: TEdit
     Left = 136
     Top = 288
     Width = 121
     Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object cbxEstado: TComboBox
     Left = 136
     Top = 336
     Width = 121
     Height = 21
-    TabOrder = 5
+    TabOrder = 4
     Text = 'cbxEstado'
+    Items.Strings = (
+      'alta'
+      'en proceso de revision'
+      'solucionado')
+  end
+  object dtFecha: TDateTimePicker
+    Left = 136
+    Top = 245
+    Width = 121
+    Height = 21
+    Date = 44285.000000000000000000
+    Time = 0.465579988427634800
+    TabOrder = 5
   end
 end

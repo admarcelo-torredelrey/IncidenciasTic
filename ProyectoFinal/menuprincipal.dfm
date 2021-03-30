@@ -2242,6 +2242,7 @@ object xmainmenu: Txmainmenu
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    OnClick = btnIncidenciasClick
   end
   object btnEquipos: TButton
     Left = 280

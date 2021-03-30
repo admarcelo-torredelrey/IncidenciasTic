@@ -20,6 +20,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnGestionAulasClick(Sender: TObject);
     procedure btnEquiposClick(Sender: TObject);
+    procedure btnIncidenciasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,7 +34,7 @@ implementation
 
 {$R *.dfm}
 
-uses login, manageusers, aulas, gestionequipos;
+uses login, manageusers, aulas, gestionequipos, gestionincidencias;
 
 procedure Txmainmenu.btnEquiposClick(Sender: TObject);
 begin
@@ -43,6 +44,11 @@ end;
 procedure Txmainmenu.btnGestionAulasClick(Sender: TObject);
 begin
       xAulas.showmodal;
+end;
+
+procedure Txmainmenu.btnIncidenciasClick(Sender: TObject);
+begin
+  xgestionIncidencias.showmodal;
 end;
 
 procedure Txmainmenu.FormClose(Sender: TObject; var Action: TCloseAction);
