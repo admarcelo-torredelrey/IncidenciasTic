@@ -2990,33 +2990,19 @@ object xgestionIncidencias: TxgestionIncidencias
         Visible = True
       end>
   end
-  object txtAula: TEdit
-    Left = 136
-    Top = 144
-    Width = 121
-    Height = 21
-    TabOrder = 1
-  end
-  object txtEquipamiento: TEdit
-    Left = 136
-    Top = 192
-    Width = 121
-    Height = 21
-    TabOrder = 2
-  end
   object txtProfesor: TEdit
     Left = 136
     Top = 288
     Width = 121
     Height = 21
-    TabOrder = 3
+    TabOrder = 1
   end
   object cbxEstado: TComboBox
     Left = 136
     Top = 336
     Width = 121
     Height = 21
-    TabOrder = 4
+    TabOrder = 2
     Text = 'cbxEstado'
     Items.Strings = (
       'alta'
@@ -3030,6 +3016,30 @@ object xgestionIncidencias: TxgestionIncidencias
     Height = 21
     Date = 44285.000000000000000000
     Time = 0.465579988427634800
+    TabOrder = 3
+  end
+  object cbxAula: TComboBox
+    Left = 136
+    Top = 143
+    Width = 121
+    Height = 21
+    TabOrder = 4
+  end
+  object cbxEquipo: TComboBox
+    Left = 136
+    Top = 194
+    Width = 121
+    Height = 21
     TabOrder = 5
+  end
+  object btnVolver: TButton
+    Left = 744
+    Top = 0
+    Width = 89
+    Height = 41
+    Caption = 'Volver'
+    Style = bsCommandLink
+    TabOrder = 6
+    OnClick = btnVolverClick
   end
 end

@@ -16,8 +16,6 @@ type
     imgPost: TImage;
     imgDelete: TImage;
     gridIncidencias: TDBGrid;
-    txtAula: TEdit;
-    txtEquipamiento: TEdit;
     txtProfesor: TEdit;
     cbxEstado: TComboBox;
     lblAula: TLabel;
@@ -26,6 +24,9 @@ type
     lblProfesor: TLabel;
     lblEstado: TLabel;
     dtFecha: TDateTimePicker;
+    cbxAula: TComboBox;
+    cbxEquipo: TComboBox;
+    btnVolver: TButton;
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
     procedure imgNextClick(Sender: TObject);
@@ -34,6 +35,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure gridIncidenciasCellClick(Column: TColumn);
     procedure imgPostClick(Sender: TObject);
+    procedure btnVolverClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,6 +51,11 @@ implementation
 
 uses menuprincipal;
 
+procedure TxgestionIncidencias.btnVolverClick(Sender: TObject);
+begin
+    ModalResult:=mrok;
+end;
+
 procedure TxgestionIncidencias.FormActivate(Sender: TObject);
 var
 USERID : Integer;
@@ -62,7 +69,7 @@ begin
        end;
 
 
-       //Si el usuario es administrador, se habilita el seleccionar usuario
+       //Si el usuario es administrador, se habilita el cambiar
        if usertype='Admin' then
        begin
           cbxEstado.enabled:=true;
@@ -76,18 +83,48 @@ begin
       xdatos.tIncidencias.First;
       if not xdatos.tIncidencias.Eof then
       begin
-        txtAula.Text:=xdatos.tIncidenciasaula.Value;
-        txtEquipamiento.Text:=xdatos.tIncidenciasequipamiento.Value;
+        cbxAula.Text:=xdatos.tIncidenciasaula.Value;
+        cbxEquipo.Text:=xdatos.tIncidenciasequipamiento.Value;
         dtFecha.DateTime:=xdatos.tIncidenciasfecha.Value;
         txtProfesor.Text:=xdatos.tIncidenciasprofesor.Value;
         cbxEstado.Text:=xdatos.tIncidenciasestado.Value;
       end;
+
+      //rellenamos los combobox con las aulas y los equipamentos
+
+      xdatos.tAulas.Open();
+      xdatos.tEquipos.Open();
+
+      xdatos.tAulas.First;
+      xdatos.tEquipos.First;
+
+      cbxAula.Items.Clear;
+      cbxEquipo.Items.Clear;
+
+      while not xdatos.tAulas.Eof do
+      begin
+        cbxAula.Items.Add(xdatos.tAulasnombre.Value);
+        xdatos.tAulas.Next;
+      end;
+
+      while not xdatos.tEquipos.Eof do
+      begin
+        cbxEquipo.Items.Add(xdatos.tEquiposnombre.Value);
+        xdatos.tEquipos.Next;
+      end;
+
+
+      cbxAula.ItemIndex:=0;
+      cbxEquipo.ItemIndex:=0;
+
+
+
 end;
 
 procedure TxgestionIncidencias.gridIncidenciasCellClick(Column: TColumn);
 begin
-txtAula.Text:=xdatos.tIncidenciasaula.Value;
-txtEquipamiento.Text:=xdatos.tIncidenciasequipamiento.Value;
+cbxAula.Text:=xdatos.tIncidenciasaula.Value;
+cbxEquipo.Text:=xdatos.tIncidenciasequipamiento.Value;
 dtFecha.DateTime:=xdatos.tIncidenciasfecha.Value;
 txtProfesor.Text:=xdatos.tIncidenciasprofesor.Value;
 cbxEstado.Text:=xdatos.tIncidenciasestado.Value;
@@ -101,8 +138,8 @@ end;
 procedure TxgestionIncidencias.imgLastClick(Sender: TObject);
 begin
 xdatos.tIncidencias.Last;
-txtAula.Text:=xdatos.tIncidenciasaula.Value;
-txtEquipamiento.Text:=xdatos.tIncidenciasequipamiento.Value;
+cbxAula.Text:=xdatos.tIncidenciasaula.Value;
+cbxEquipo.Text:=xdatos.tIncidenciasequipamiento.Value;
 dtFecha.DateTime:=xdatos.tIncidenciasfecha.Value;
 txtProfesor.Text:=xdatos.tIncidenciasprofesor.Value;
 cbxEstado.Text:=xdatos.tIncidenciasestado.Value;
@@ -111,8 +148,8 @@ end;
 procedure TxgestionIncidencias.imgNextClick(Sender: TObject);
 begin
 xdatos.tIncidencias.Next();
-txtAula.Text:=xdatos.tIncidenciasaula.Value;
-txtEquipamiento.Text:=xdatos.tIncidenciasequipamiento.Value;
+cbxAula.Text:=xdatos.tIncidenciasaula.Value;
+cbxEquipo.Text:=xdatos.tIncidenciasequipamiento.Value;
 dtFecha.DateTime:=xdatos.tIncidenciasfecha.Value;
 txtProfesor.Text:=xdatos.tIncidenciasprofesor.Value;
 cbxEstado.Text:=xdatos.tIncidenciasestado.Value;
@@ -120,15 +157,15 @@ end;
 
 procedure TxgestionIncidencias.imgPostClick(Sender: TObject);
 begin
-      if (txtAula.Text='') or (txtEquipamiento.Text='') or (txtProfesor.Text='') or (cbxEstado.Text='') then
+      if (cbxAula.Text='') or (cbxEquipo.Text='') or (txtProfesor.Text='') or (cbxEstado.Text='') then
       begin
         ShowMessage('No puedes dejar campos vacios!');
       end
       else
       begin
         xdatos.tIncidencias.Edit;
-        xdatos.tIncidenciasaula.Value:=txtAula.Text;
-        xdatos.tIncidenciasequipamiento.Value:=txtEquipamiento.Text;
+        xdatos.tIncidenciasaula.Value:=cbxAula.Text;
+        xdatos.tIncidenciasequipamiento.Value:=cbxEquipo.Text;
         xdatos.tIncidenciasfecha.Value:=dtFecha.DateTime;
         xdatos.tIncidenciasprofesor.Value:=txtProfesor.Text;
         xdatos.tIncidenciasestado.Value:=cbxEstado.Text;
@@ -140,8 +177,8 @@ end;
 procedure TxgestionIncidencias.imgPreviousClick(Sender: TObject);
 begin
 xdatos.tIncidencias.Prior;
-txtAula.Text:=xdatos.tIncidenciasaula.Value;
-txtEquipamiento.Text:=xdatos.tIncidenciasequipamiento.Value;
+cbxAula.Text:=xdatos.tIncidenciasaula.Value;
+cbxEquipo.Text:=xdatos.tIncidenciasequipamiento.Value;
 dtFecha.DateTime:=xdatos.tIncidenciasfecha.Value;
 txtProfesor.Text:=xdatos.tIncidenciasprofesor.Value;
 cbxEstado.Text:=xdatos.tIncidenciasestado.Value;
@@ -150,8 +187,8 @@ end;
 procedure TxgestionIncidencias.imgPriorClick(Sender: TObject);
 begin
     xdatos.tIncidencias.First();
-    txtAula.Text:=xdatos.tIncidenciasaula.Value;
-    txtEquipamiento.Text:=xdatos.tIncidenciasequipamiento.Value;
+    cbxAula.Text:=xdatos.tIncidenciasaula.Value;
+    cbxEquipo.Text:=xdatos.tIncidenciasequipamiento.Value;
     dtFecha.DateTime:=xdatos.tIncidenciasfecha.Value;
     txtProfesor.Text:=xdatos.tIncidenciasprofesor.Value;
     cbxEstado.Text:=xdatos.tIncidenciasestado.Value;
