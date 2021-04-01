@@ -33,6 +33,7 @@ type
     procedure imgPostClick(Sender: TObject);
     procedure imgDeleteClick(Sender: TObject);
     procedure gridAulasCellClick(Column: TColumn);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -46,7 +47,7 @@ implementation
 
 {$R *.dfm}
 
-uses altasaulas;
+uses altasaulas, menuprincipal;
 
 procedure TxAulas.btnVolverClick(Sender: TObject);
 begin
@@ -66,6 +67,11 @@ begin
       txtNombre.Text:=xdatos.tAulasnombre.Value;
       cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
     end;
+end;
+
+procedure TxAulas.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  xmainmenu.Visible:=true;
 end;
 
 procedure TxAulas.gridAulasCellClick(Column: TColumn);

@@ -1,0 +1,63 @@
+unit altaincidencias;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    cbxAula: TComboBox;
+    cbxEquipo: TComboBox;
+    lblAula: TLabel;
+    lblEquipamiento: TLabel;
+    lblFecha: TLabel;
+    lblProfesor: TLabel;
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses datos;
+
+procedure TForm1.FormActivate(Sender: TObject);
+begin
+    //rellenamos los combobox con las aulas y los equipamentos
+
+      xdatos.tAulas.Open();
+      xdatos.tEquipos.Open();
+
+      xdatos.tAulas.First;
+      xdatos.tEquipos.First;
+
+      cbxAula.Items.Clear;
+      cbxEquipo.Items.Clear;
+
+      while not xdatos.tAulas.Eof do
+      begin
+        cbxAula.Items.Add(xdatos.tAulasnombre.Value);
+        xdatos.tAulas.Next;
+      end;
+
+      while not xdatos.tEquipos.Eof do
+      begin
+        cbxEquipo.Items.Add(xdatos.tEquiposnombre.Value);
+        xdatos.tEquipos.Next;
+      end;
+
+
+      cbxAula.ItemIndex:=0;
+      cbxEquipo.ItemIndex:=0;
+end;
+
+end.

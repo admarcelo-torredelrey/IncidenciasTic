@@ -26,6 +26,7 @@ type
     txtFecha: TEdit;
     btnVolver: TButton;
     imgMove: TImage;
+    btnAlta: TButton;
     procedure FormActivate(Sender: TObject);
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
@@ -37,6 +38,8 @@ type
     procedure gridEquiposCellClick(Column: TColumn);
     procedure btnVolverClick(Sender: TObject);
     procedure imgMoveClick(Sender: TObject);
+    procedure btnAltaClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -50,7 +53,12 @@ implementation
 
 {$R *.dfm}
 
-uses trasladoequipo;
+uses trasladoequipo, altasequipo, menuprincipal;
+
+procedure Txgestionequipo.btnAltaClick(Sender: TObject);
+begin
+    xaltasEquipo.showmodal;
+end;
 
 procedure Txgestionequipo.btnVolverClick(Sender: TObject);
 begin
@@ -70,6 +78,11 @@ begin
     txtFecha.Text:=DateToStr(xdatos.tEquiposfecha.Value);
 
     end;
+end;
+
+procedure Txgestionequipo.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+     xmainmenu.Visible:=true;
 end;
 
 procedure Txgestionequipo.gridEquiposCellClick(Column: TColumn);

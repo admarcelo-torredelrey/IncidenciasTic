@@ -38,16 +38,19 @@ uses login, manageusers, aulas, gestionequipos, gestionincidencias;
 
 procedure Txmainmenu.btnEquiposClick(Sender: TObject);
 begin
+    xmainmenu.Visible:=false;
     xgestionequipo.showmodal;
 end;
 
 procedure Txmainmenu.btnGestionAulasClick(Sender: TObject);
 begin
+      xmainmenu.Visible:=false;
       xAulas.showmodal;
 end;
 
 procedure Txmainmenu.btnIncidenciasClick(Sender: TObject);
 begin
+  xmainmenu.Visible:=false;
   xgestionIncidencias.showmodal;
 end;
 

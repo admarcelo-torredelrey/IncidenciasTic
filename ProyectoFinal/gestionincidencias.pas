@@ -27,6 +27,7 @@ type
     cbxAula: TComboBox;
     cbxEquipo: TComboBox;
     btnVolver: TButton;
+    btnAlta: TButton;
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
     procedure imgNextClick(Sender: TObject);
@@ -36,6 +37,8 @@ type
     procedure gridIncidenciasCellClick(Column: TColumn);
     procedure imgPostClick(Sender: TObject);
     procedure btnVolverClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnAltaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,7 +52,12 @@ implementation
 
 {$R *.dfm}
 
-uses menuprincipal;
+uses menuprincipal, altaincidencias;
+
+procedure TxgestionIncidencias.btnAltaClick(Sender: TObject);
+begin
+  xaltaIncidencias.showmodal;
+end;
 
 procedure TxgestionIncidencias.btnVolverClick(Sender: TObject);
 begin
@@ -119,6 +127,12 @@ begin
 
 
 
+end;
+
+procedure TxgestionIncidencias.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  xmainmenu.Visible:=true;
 end;
 
 procedure TxgestionIncidencias.gridIncidenciasCellClick(Column: TColumn);

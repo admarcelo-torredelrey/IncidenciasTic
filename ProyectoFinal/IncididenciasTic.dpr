@@ -11,7 +11,8 @@ uses
   gestionequipos in 'gestionequipos.pas' {xgestionequipo},
   trasladoequipo in 'trasladoequipo.pas' {xTraslado},
   gestionincidencias in 'gestionincidencias.pas' {xgestionIncidencias},
-  altasequipo in 'altasequipo.pas' {xaltasEquipo};
+  altasequipo in 'altasequipo.pas' {xaltasEquipo},
+  altaincidencias in 'altaincidencias.pas' {xaltaIncidencias};
 
 {$R *.res}
 
@@ -28,5 +29,6 @@ begin
   Application.CreateForm(TxTraslado, xTraslado);
   Application.CreateForm(TxgestionIncidencias, xgestionIncidencias);
   Application.CreateForm(TxaltasEquipo, xaltasEquipo);
+  Application.CreateForm(TxaltaIncidencias, xaltaIncidencias);
   Application.Run;
 end.

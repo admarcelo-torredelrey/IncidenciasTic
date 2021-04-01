@@ -12,6 +12,7 @@ object xgestionIncidencias: TxgestionIncidencias
   Font.Style = []
   OldCreateOrder = False
   OnActivate = FormActivate
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object imgPrior: TImage
@@ -3041,5 +3042,14 @@ object xgestionIncidencias: TxgestionIncidencias
     Style = bsCommandLink
     TabOrder = 6
     OnClick = btnVolverClick
+  end
+  object btnAlta: TButton
+    Left = 336
+    Top = 48
+    Width = 113
+    Height = 57
+    Caption = 'ALTA'
+    TabOrder = 7
+    OnClick = btnAltaClick
   end
 end

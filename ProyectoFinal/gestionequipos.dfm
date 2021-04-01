@@ -12,6 +12,7 @@ object xgestionequipo: Txgestionequipo
   Font.Style = []
   OldCreateOrder = False
   OnActivate = FormActivate
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object imgPrior: TImage
@@ -3322,5 +3323,14 @@ object xgestionequipo: Txgestionequipo
     Style = bsCommandLink
     TabOrder = 5
     OnClick = btnVolverClick
+  end
+  object btnAlta: TButton
+    Left = 376
+    Top = 40
+    Width = 145
+    Height = 49
+    Caption = 'ALTA'
+    TabOrder = 6
+    OnClick = btnAltaClick
   end
 end

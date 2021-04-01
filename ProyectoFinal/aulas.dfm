@@ -12,6 +12,7 @@
   Font.Style = []
   OldCreateOrder = False
   OnActivate = FormActivate
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object imgPrior: TImage
@@ -2927,7 +2928,6 @@
       item
         Expanded = False
         FieldName = 'ubicacion'
-        Width = 64
         Visible = True
       end>
   end

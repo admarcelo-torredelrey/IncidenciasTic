@@ -52,7 +52,7 @@ begin
         xdatos.tEquipos.Post;
 
         txtNombre.Text:='';
-        txtDescripcion.Text='';
+        txtDescripcion.Text:='';
 
 
         ShowMessage('El equipo '+xdatos.tEquiposnombre.Value+' ha sido añadido correctamente');
@@ -72,7 +72,7 @@ begin
 
       cbxUbicacion.Items.Clear;
 
-      if not xdatos.tAulas.Eof then
+      while not xdatos.tAulas.Eof do
       begin
         cbxUbicacion.Items.Add(xdatos.tAulasnombre.Value);
         xdatos.tAulas.Next;
