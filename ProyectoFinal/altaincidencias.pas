@@ -15,8 +15,10 @@ type
     lblProfesor: TLabel;
     txtProfesor: TEdit;
     btnVolver: TButton;
+    btnGuardar: TButton;
     procedure FormActivate(Sender: TObject);
     procedure btnVolverClick(Sender: TObject);
+    procedure btnGuardarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,6 +37,38 @@ uses datos;
 procedure TxaltaIncidencias.btnVolverClick(Sender: TObject);
 begin
   ModalResult:=mrok;
+end;
+
+procedure TxaltaIncidencias.btnGuardarClick(Sender: TObject);
+begin
+
+  if (txtProfesor.Text='') or (cbxEquipo.Text='') or (cbxAula.Text='') then
+  begin
+    ShowMessage('Debes rellenar todos los datos!');
+  end
+  else
+  begin
+
+    xdatos.tIncidencias.Append;
+
+    xdatos.tIncidenciasaula.Value:=cbxAula.Text;
+    xdatos.tIncidenciasequipamiento.Value:=cbxEquipo.Text;
+    xdatos.tIncidenciasfecha.Value:=Now;
+    xdatos.tIncidenciasprofesor.Value:=txtProfesor.Text;
+    xdatos.tIncidenciasestado.Value:='alta';
+    xdatos.tIncidencias.Post;
+
+
+    cbxAula.ItemIndex:=0;
+    cbxEquipo.ItemIndex:=0;
+    txtProfesor.Text:='';
+
+    ShowMessage('La incidencia ha sido añadida correctamente');
+
+
+
+  end;
+
 end;
 
 procedure TxaltaIncidencias.FormActivate(Sender: TObject);

@@ -86,4 +86,13 @@ object xaltaIncidencias: TxaltaIncidencias
     TabOrder = 3
     OnClick = btnVolverClick
   end
+  object btnGuardar: TButton
+    Left = 208
+    Top = 208
+    Width = 129
+    Height = 33
+    Caption = 'Guardar'
+    TabOrder = 4
+    OnClick = btnGuardarClick
+  end
 end
