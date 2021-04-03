@@ -2928,20 +2928,22 @@
       item
         Expanded = False
         FieldName = 'ubicacion'
+        Width = 64
         Visible = True
       end>
   end
   object btnConsultar: TButton
-    Left = 568
-    Top = 9
+    Left = 616
+    Top = 89
     Width = 121
     Height = 49
     Caption = 'CONSULTAR'
     TabOrder = 1
+    OnClick = btnConsultarClick
   end
   object Button1: TButton
-    Left = 376
-    Top = 9
+    Left = 424
+    Top = 89
     Width = 121
     Height = 49
     Caption = 'ALTA'

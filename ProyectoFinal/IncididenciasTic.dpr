@@ -12,7 +12,8 @@ uses
   trasladoequipo in 'trasladoequipo.pas' {xTraslado},
   gestionincidencias in 'gestionincidencias.pas' {xgestionIncidencias},
   altasequipo in 'altasequipo.pas' {xaltasEquipo},
-  altaincidencias in 'altaincidencias.pas' {xaltaIncidencias};
+  altaincidencias in 'altaincidencias.pas' {xaltaIncidencias},
+  consultaraulas in 'consultaraulas.pas' {xconsultaraulas};
 
 {$R *.res}
 
@@ -30,5 +31,6 @@ begin
   Application.CreateForm(TxgestionIncidencias, xgestionIncidencias);
   Application.CreateForm(TxaltasEquipo, xaltasEquipo);
   Application.CreateForm(TxaltaIncidencias, xaltaIncidencias);
+  Application.CreateForm(Txconsultaraulas, xconsultaraulas);
   Application.Run;
 end.

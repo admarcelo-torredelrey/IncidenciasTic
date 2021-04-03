@@ -214,6 +214,7 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object tIncidenciasaula: TStringField
       AutoGenerateValue = arDefault
@@ -249,5 +250,17 @@ object xdatos: Txdatos
     DataSet = tIncidencias
     Left = 88
     Top = 352
+  end
+  object queryAulas: TFDQuery
+    Connection = dbincidencias
+    SQL.Strings = (
+      'select * from aula')
+    Left = 152
+    Top = 176
+  end
+  object dsqueryAula: TDataSource
+    DataSet = queryAulas
+    Left = 216
+    Top = 176
   end
 end

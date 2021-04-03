@@ -52,6 +52,8 @@ type
     tIncidenciasfecha: TDateField;
     tIncidenciasprofesor: TStringField;
     tIncidenciasestado: TStringField;
+    queryAulas: TFDQuery;
+    dsqueryAula: TDataSource;
   private
     { Private declarations }
   public

@@ -34,6 +34,7 @@ type
     procedure imgDeleteClick(Sender: TObject);
     procedure gridAulasCellClick(Column: TColumn);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnConsultarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,7 +48,12 @@ implementation
 
 {$R *.dfm}
 
-uses altasaulas, menuprincipal;
+uses altasaulas, menuprincipal, consultaraulas;
+
+procedure TxAulas.btnConsultarClick(Sender: TObject);
+begin
+    xconsultaraulas.showmodal;
+end;
 
 procedure TxAulas.btnVolverClick(Sender: TObject);
 begin
