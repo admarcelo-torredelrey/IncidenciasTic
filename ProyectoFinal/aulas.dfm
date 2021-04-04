@@ -2901,6 +2901,32 @@
     Font.Style = []
     ParentFont = False
   end
+  object lblColumna: TLabel
+    Left = 440
+    Top = 135
+    Width = 50
+    Height = 16
+    Caption = 'Columna'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblValor: TLabel
+    Left = 592
+    Top = 135
+    Width = 30
+    Height = 16
+    Caption = 'Valor'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object gridAulas: TDBGrid
     Left = 394
     Top = 237
@@ -2933,8 +2959,8 @@
       end>
   end
   object btnConsultar: TButton
-    Left = 616
-    Top = 89
+    Left = 592
+    Top = 33
     Width = 121
     Height = 49
     Caption = 'CONSULTAR'
@@ -2942,8 +2968,8 @@
     OnClick = btnConsultarClick
   end
   object Button1: TButton
-    Left = 424
-    Top = 89
+    Left = 400
+    Top = 33
     Width = 121
     Height = 49
     Caption = 'ALTA'
@@ -2981,5 +3007,34 @@
     Height = 21
     MaxLength = 30
     TabOrder = 5
+  end
+  object btnLocalizar: TButton
+    Left = 736
+    Top = 152
+    Width = 75
+    Height = 25
+    Caption = 'Localizar'
+    TabOrder = 6
+    OnClick = btnLocalizarClick
+  end
+  object txtValor: TEdit
+    Left = 592
+    Top = 154
+    Width = 121
+    Height = 21
+    TabOrder = 7
+  end
+  object cbxColumna: TComboBox
+    Left = 440
+    Top = 154
+    Width = 121
+    Height = 21
+    ItemIndex = 0
+    TabOrder = 8
+    Text = 'id'
+    OnChange = cbxColumnaChange
+    Items.Strings = (
+      'id'
+      'nombre')
   end
 end

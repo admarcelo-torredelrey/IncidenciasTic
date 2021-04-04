@@ -124,6 +124,7 @@ end;
 
 procedure Txconsultaraulas.FormActivate(Sender: TObject);
 begin
+    cbxColumna.ItemIndex:=0;
     txtValor.NumbersOnly:=true;
     cbxUbicacion.Enabled:=false;
     xdatos.queryAulas.Close;

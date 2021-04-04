@@ -23,6 +23,11 @@ type
     txtNombre: TEdit;
     lblNombre: TLabel;
     lblUbicacion: TLabel;
+    btnLocalizar: TButton;
+    txtValor: TEdit;
+    cbxColumna: TComboBox;
+    lblColumna: TLabel;
+    lblValor: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure btnVolverClick(Sender: TObject);
@@ -35,6 +40,8 @@ type
     procedure gridAulasCellClick(Column: TColumn);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnConsultarClick(Sender: TObject);
+    procedure cbxColumnaChange(Sender: TObject);
+    procedure btnLocalizarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,6 +62,19 @@ begin
     xconsultaraulas.showmodal;
 end;
 
+procedure TxAulas.btnLocalizarClick(Sender: TObject);
+begin
+    if xdatos.tAulas.Locate(cbxColumna.Text,txtValor.Text) then
+    begin
+
+    end
+    else
+    begin
+      ShowMessage('No se ha encontrado ningún registro para esa busqueda');
+    end;
+
+end;
+
 procedure TxAulas.btnVolverClick(Sender: TObject);
 begin
     modalResult:=mrok;
@@ -65,6 +85,22 @@ begin
     xAltasAulas.showmodal();
 end;
 
+procedure TxAulas.cbxColumnaChange(Sender: TObject);
+begin
+      if cbxColumna.Text='id' then
+      begin
+
+          txtValor.NumbersOnly:=true;
+          txtValor.Text:='';
+      end
+      else
+      begin
+            txtValor.NumbersOnly:=false;
+            txtValor.Text:='';
+      end;
+
+end;
+
 procedure TxAulas.FormActivate(Sender: TObject);
 begin
     xdatos.tAulas.Open();
@@ -73,6 +109,8 @@ begin
       txtNombre.Text:=xdatos.tAulasnombre.Value;
       cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
     end;
+    cbxColumna.ItemIndex:=0;
+    txtValor.NumbersOnly:=true;
 end;
 
 procedure TxAulas.FormClose(Sender: TObject; var Action: TCloseAction);

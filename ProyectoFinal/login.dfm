@@ -16,7 +16,7 @@ object xlogin: Txlogin
   PixelsPerInch = 96
   TextHeight = 13
   object imgLoginIcon: TImage
-    Left = 144
+    Left = 152
     Top = 72
     Width = 65
     Height = 65
