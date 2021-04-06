@@ -28,6 +28,10 @@ type
     cbxEquipo: TComboBox;
     btnVolver: TButton;
     btnAlta: TButton;
+    txtValor: TEdit;
+    Button1: TButton;
+    lblValor: TLabel;
+    btnConsultar: TButton;
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
     procedure imgNextClick(Sender: TObject);
@@ -39,6 +43,8 @@ type
     procedure btnVolverClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnAltaClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure btnConsultarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,16 +58,43 @@ implementation
 
 {$R *.dfm}
 
-uses menuprincipal, altaincidencias;
+uses menuprincipal, altaincidencias, consultarincidencias;
 
 procedure TxgestionIncidencias.btnAltaClick(Sender: TObject);
 begin
   xaltaIncidencias.showmodal;
 end;
 
+procedure TxgestionIncidencias.btnConsultarClick(Sender: TObject);
+begin
+    xconsultarIncidencias.showmodal;
+end;
+
 procedure TxgestionIncidencias.btnVolverClick(Sender: TObject);
 begin
     ModalResult:=mrok;
+end;
+
+procedure TxgestionIncidencias.Button1Click(Sender: TObject);
+begin
+      if txtValor.Text='' then
+      begin
+        ShowMessage('Rellena el campo para localizar registros');
+      end
+      else
+      begin
+        if xdatos.tIncidencias.Locate('id',StrToInt(txtValor.Text)) then
+        begin
+          txtValor.Text:='';
+        end
+        else
+        begin
+            ShowMessage('No se ha encontrado ningún registro asociado a ese identificador');
+        end;
+
+
+      end;
+
 end;
 
 procedure TxgestionIncidencias.FormActivate(Sender: TObject);

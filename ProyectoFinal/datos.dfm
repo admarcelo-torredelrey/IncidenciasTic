@@ -263,4 +263,50 @@ object xdatos: Txdatos
     Left = 216
     Top = 176
   end
+  object queryIncidencias: TFDQuery
+    Connection = dbincidencias
+    SQL.Strings = (
+      'select * from incidencia')
+    Left = 176
+    Top = 352
+    object queryIncidenciasid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object queryIncidenciasaula: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'aula'
+      Origin = 'aula'
+      Size = 30
+    end
+    object queryIncidenciasequipamiento: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'equipamiento'
+      Origin = 'equipamiento'
+      Size = 250
+    end
+    object queryIncidenciasfecha: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'fecha'
+      Origin = 'fecha'
+    end
+    object queryIncidenciasprofesor: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'profesor'
+      Origin = 'profesor'
+      Size = 30
+    end
+    object queryIncidenciasestado: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'estado'
+      Origin = 'estado'
+      Size = 30
+    end
+  end
+  object dsqueryIncidencia: TDataSource
+    DataSet = queryIncidencias
+    Left = 272
+    Top = 352
+  end
 end

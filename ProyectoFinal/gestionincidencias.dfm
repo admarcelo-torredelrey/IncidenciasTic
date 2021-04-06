@@ -2940,6 +2940,19 @@ object xgestionIncidencias: TxgestionIncidencias
     Font.Style = []
     ParentFont = False
   end
+  object lblValor: TLabel
+    Left = 424
+    Top = 211
+    Width = 11
+    Height = 16
+    Caption = 'Id'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object gridIncidencias: TDBGrid
     Left = 279
     Top = 272
@@ -3044,12 +3057,38 @@ object xgestionIncidencias: TxgestionIncidencias
     OnClick = btnVolverClick
   end
   object btnAlta: TButton
-    Left = 336
-    Top = 48
+    Left = 352
+    Top = 80
     Width = 113
     Height = 57
     Caption = 'ALTA'
     TabOrder = 7
     OnClick = btnAltaClick
+  end
+  object txtValor: TEdit
+    Left = 448
+    Top = 210
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 8
+  end
+  object Button1: TButton
+    Left = 608
+    Top = 208
+    Width = 75
+    Height = 25
+    Caption = 'Localizar'
+    TabOrder = 9
+    OnClick = Button1Click
+  end
+  object btnConsultar: TButton
+    Left = 568
+    Top = 80
+    Width = 129
+    Height = 57
+    Caption = 'CONSULTAR'
+    TabOrder = 10
+    OnClick = btnConsultarClick
   end
 end

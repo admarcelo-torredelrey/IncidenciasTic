@@ -54,6 +54,14 @@ type
     tIncidenciasestado: TStringField;
     queryAulas: TFDQuery;
     dsqueryAula: TDataSource;
+    queryIncidencias: TFDQuery;
+    dsqueryIncidencia: TDataSource;
+    queryIncidenciasid: TFDAutoIncField;
+    queryIncidenciasaula: TStringField;
+    queryIncidenciasequipamiento: TStringField;
+    queryIncidenciasfecha: TDateField;
+    queryIncidenciasprofesor: TStringField;
+    queryIncidenciasestado: TStringField;
   private
     { Private declarations }
   public
