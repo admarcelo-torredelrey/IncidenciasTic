@@ -1,7 +1,7 @@
 object xconsultarIncidencias: TxconsultarIncidencias
   Left = 0
   Top = 0
-  Caption = 'Consultar '
+  Caption = 'Consultar Incidencias'
   ClientHeight = 404
   ClientWidth = 755
   Color = clBtnFace
@@ -14,6 +14,26 @@ object xconsultarIncidencias: TxconsultarIncidencias
   OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
+  object lblProfesor: TLabel
+    Left = 240
+    Top = 37
+    Width = 41
+    Height = 13
+    Caption = 'Profesor'
+  end
+  object lblValue: TLabel
+    Left = 384
+    Top = 37
+    Width = 3
+    Height = 13
+  end
+  object lblFecha: TLabel
+    Left = 543
+    Top = 37
+    Width = 29
+    Height = 13
+    Caption = 'Fecha'
+  end
   object gridIncidencias: TDBGrid
     Left = 24
     Top = 176
@@ -65,10 +85,69 @@ object xconsultarIncidencias: TxconsultarIncidencias
       end>
   end
   object txtProfesor: TEdit
-    Left = 136
-    Top = 48
-    Width = 121
+    Left = 240
+    Top = 56
+    Width = 113
     Height = 21
     TabOrder = 1
+  end
+  object cbxColumna: TComboBox
+    Left = 72
+    Top = 56
+    Width = 129
+    Height = 21
+    ItemIndex = 0
+    TabOrder = 2
+    Text = 'aula'
+    OnChange = cbxColumnaChange
+    Items.Strings = (
+      'aula'
+      'equipamiento'
+      'fecha'
+      'profesor'
+      'estado')
+  end
+  object cbxValue: TComboBox
+    Left = 384
+    Top = 56
+    Width = 129
+    Height = 21
+    TabOrder = 3
+  end
+  object dtFecha: TDateTimePicker
+    Left = 543
+    Top = 56
+    Width = 138
+    Height = 21
+    Date = 44296.000000000000000000
+    Time = 0.528445266201742900
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 270
+    Top = 120
+    Width = 75
+    Height = 25
+    Caption = 'Filtrar'
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 376
+    Top = 120
+    Width = 75
+    Height = 25
+    Caption = 'Reiniciar'
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+  object btnVolver: TButton
+    Left = 671
+    Top = 0
+    Width = 90
+    Height = 41
+    Caption = 'Volver'
+    Style = bsCommandLink
+    TabOrder = 7
+    OnClick = btnVolverClick
   end
 end
