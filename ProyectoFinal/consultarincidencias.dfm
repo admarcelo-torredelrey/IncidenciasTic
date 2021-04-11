@@ -130,6 +130,7 @@ object xconsultarIncidencias: TxconsultarIncidencias
     Height = 25
     Caption = 'Filtrar'
     TabOrder = 5
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 376

@@ -24,6 +24,7 @@ type
     procedure btnVolverClick(Sender: TObject);
     procedure cbxColumnaChange(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +33,7 @@ type
 
 var
   xconsultarIncidencias: TxconsultarIncidencias;
+  PRIMERAVEZ: Boolean;
 
 implementation
 
@@ -40,6 +42,66 @@ implementation
 procedure TxconsultarIncidencias.btnVolverClick(Sender: TObject);
 begin
   ModalResult:=mrok;
+end;
+
+procedure TxconsultarIncidencias.Button1Click(Sender: TObject);
+begin
+    xdatos.queryIncidencias.Close;
+    if PRIMERAVEZ then
+    begin
+         xdatos.queryIncidencias.SQL.Text:=xdatos.queryIncidencias.SQL.Text+' AND';
+
+    end
+    else
+    begin
+         xdatos.queryIncidencias.SQL.Text:=xdatos.queryIncidencias.SQL.Text+' WHERE';
+         PRIMERAVEZ:=true;
+    end;
+
+      if cbxColumna.Text='aula' then
+      begin
+
+        xdatos.queryIncidencias.SQL.Text:=xdatos.queryIncidencias.SQL.Text+' aula =:AULA';
+        xdatos.queryIncidencias.ParamByName('AULA').AsString:=cbxValue.Text;
+
+
+
+      end else if cbxColumna.Text='equipamiento' then
+      begin
+           xdatos.queryIncidencias.SQL.Text:=xdatos.queryIncidencias.SQL.Text+' equipamiento =:EQUIPO';
+          xdatos.queryIncidencias.ParamByName('EQUIPO').AsString:=cbxValue.Text;
+
+
+      end
+      else if cbxColumna.Text='fecha' then
+      begin
+      xdatos.queryIncidencias.SQL.Text:=xdatos.queryIncidencias.SQL.Text+' fecha =:FECHA';
+        xdatos.queryIncidencias.ParamByName('FECHA').AsDate:=dtFecha.DateTime;
+
+
+      end
+      else if cbxColumna.Text='profesor' then
+      begin
+        xdatos.queryIncidencias.SQL.Text:=xdatos.queryIncidencias.SQL.Text+' profesor =:PROFESOR';
+        xdatos.queryIncidencias.ParamByName('PROFESOR').AsString:=txtProfesor.Text;
+
+      end
+      else if cbxColumna.Text='estado' then
+      begin
+        xdatos.queryIncidencias.SQL.Text:=xdatos.queryIncidencias.SQL.Text+' estado =:ESTADO';
+        xdatos.queryIncidencias.ParamByName('ESTADO').AsString:=cbxValue.Text;
+
+
+      end;
+
+
+      xdatos.queryIncidencias.Open();
+
+
+
+
+
+
 end;
 
 procedure TxconsultarIncidencias.Button2Click(Sender: TObject);
@@ -141,6 +203,7 @@ begin
     xdatos.queryIncidencias.close;
     xdatos.queryIncidencias.SQL.Text:='Select * from incidencia';
     xdatos.queryIncidencias.Open();
+    PRIMERAVEZ:=false;
 
 
 end;
