@@ -273,6 +273,7 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object queryIncidenciasaula: TStringField
       AutoGenerateValue = arDefault
@@ -308,5 +309,45 @@ object xdatos: Txdatos
     DataSet = queryIncidencias
     Left = 272
     Top = 352
+  end
+  object dsqueryEquipo: TDataSource
+    DataSet = queryEquipos
+    Left = 224
+    Top = 240
+  end
+  object queryEquipos: TFDQuery
+    Connection = dbincidencias
+    SQL.Strings = (
+      'select * from equipamento')
+    Left = 152
+    Top = 240
+    object queryEquiposid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object queryEquiposnombre: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nombre'
+      Origin = 'nombre'
+      Size = 50
+    end
+    object queryEquiposdescripcion: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'descripcion'
+      Origin = 'descripcion'
+      Size = 100
+    end
+    object queryEquiposubicacion: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'ubicacion'
+      Origin = 'ubicacion'
+      Size = 30
+    end
+    object queryEquiposfecha: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'fecha'
+      Origin = 'fecha'
+    end
   end
 end

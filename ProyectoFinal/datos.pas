@@ -62,6 +62,13 @@ type
     queryIncidenciasfecha: TDateField;
     queryIncidenciasprofesor: TStringField;
     queryIncidenciasestado: TStringField;
+    dsqueryEquipo: TDataSource;
+    queryEquipos: TFDQuery;
+    queryEquiposid: TFDAutoIncField;
+    queryEquiposnombre: TStringField;
+    queryEquiposdescripcion: TStringField;
+    queryEquiposubicacion: TStringField;
+    queryEquiposfecha: TDateField;
   private
     { Private declarations }
   public

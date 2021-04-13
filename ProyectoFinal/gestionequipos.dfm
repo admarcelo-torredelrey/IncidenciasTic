@@ -3333,4 +3333,33 @@ object xgestionequipo: Txgestionequipo
     TabOrder = 6
     OnClick = btnAltaClick
   end
+  object cbxColumna: TComboBox
+    Left = 379
+    Top = 224
+    Width = 121
+    Height = 21
+    ItemIndex = 0
+    TabOrder = 7
+    Text = 'id'
+    OnChange = cbxColumnaChange
+    Items.Strings = (
+      'id'
+      'nombre')
+  end
+  object txtValue: TEdit
+    Left = 544
+    Top = 224
+    Width = 121
+    Height = 21
+    TabOrder = 8
+  end
+  object btnLocalizar: TButton
+    Left = 712
+    Top = 222
+    Width = 75
+    Height = 25
+    Caption = 'Localizar'
+    TabOrder = 9
+    OnClick = btnLocalizarClick
+  end
 end

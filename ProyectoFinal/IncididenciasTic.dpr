@@ -14,7 +14,8 @@ uses
   altasequipo in 'altasequipo.pas' {xaltasEquipo},
   altaincidencias in 'altaincidencias.pas' {xaltaIncidencias},
   consultaraulas in 'consultaraulas.pas' {xconsultaraulas},
-  consultarincidencias in 'consultarincidencias.pas' {xconsultarIncidencias};
+  consultarincidencias in 'consultarincidencias.pas' {xconsultarIncidencias},
+  consultarequipos in 'consultarequipos.pas' {xconsultarEquipo};
 
 {$R *.res}
 
@@ -34,5 +35,6 @@ begin
   Application.CreateForm(TxaltaIncidencias, xaltaIncidencias);
   Application.CreateForm(Txconsultaraulas, xconsultaraulas);
   Application.CreateForm(TxconsultarIncidencias, xconsultarIncidencias);
+  Application.CreateForm(TxconsultarEquipo, xconsultarEquipo);
   Application.Run;
 end.

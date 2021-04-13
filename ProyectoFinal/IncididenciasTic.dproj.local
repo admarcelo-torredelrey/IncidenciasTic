@@ -22,8 +22,8 @@
     <Transaction>2021/03/16 15:53:57.000.950,C:\GitHub\IncidenciasTic\ProyectoFinal\altasaulas.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
     <Transaction>2021/03/16 15:53:57.000.950,C:\GitHub\IncidenciasTic\ProyectoFinal\altasaulas.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
     <Transaction>2021/03/17 14:02:32.000.602,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
-    <Transaction>2021/03/17 14:04:20.000.587,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\gestionequipos.pas</Transaction>
     <Transaction>2021/03/17 14:04:20.000.587,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\gestionequipos.dfm</Transaction>
+    <Transaction>2021/03/17 14:04:20.000.587,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\gestionequipos.pas</Transaction>
     <Transaction>2021/03/19 13:50:15.000.375,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
     <Transaction>2021/03/19 14:10:04.000.085,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\trasladoequipo.dfm</Transaction>
     <Transaction>2021/03/19 14:10:04.000.085,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\trasladoequipo.pas</Transaction>
@@ -31,8 +31,8 @@
     <Transaction>2021/03/29 11:06:09.000.176,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\gestionincidencias.dfm</Transaction>
     <Transaction>2021/03/29 11:06:09.000.176,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\gestionincidencias.pas</Transaction>
     <Transaction>2021/03/31 11:31:19.000.812,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
-    <Transaction>2021/03/31 11:58:27.000.705,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\altasequipo.dfm</Transaction>
     <Transaction>2021/03/31 11:58:27.000.705,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\altasequipo.pas</Transaction>
+    <Transaction>2021/03/31 11:58:27.000.705,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\altasequipo.dfm</Transaction>
     <Transaction>2021/04/01 11:43:20.000.889,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
     <Transaction>2021/04/01 11:47:32.000.188,C:\GitHub\IncidenciasTic\ProyectoFinal\altaincidencias.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
     <Transaction>2021/04/01 11:47:32.000.188,C:\GitHub\IncidenciasTic\ProyectoFinal\altaincidencias.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
@@ -40,7 +40,10 @@
     <Transaction>2021/04/03 12:58:42.000.501,C:\GitHub\IncidenciasTic\ProyectoFinal\consultaraulas.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
     <Transaction>2021/04/03 12:58:42.000.501,C:\GitHub\IncidenciasTic\ProyectoFinal\consultaraulas.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
     <Transaction>2021/04/06 08:56:14.000.798,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
-    <Transaction>2021/04/06 09:09:02.000.262,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\consultarincidencias.pas</Transaction>
     <Transaction>2021/04/06 09:09:02.000.262,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\consultarincidencias.dfm</Transaction>
+    <Transaction>2021/04/06 09:09:02.000.262,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\consultarincidencias.pas</Transaction>
+    <Transaction>2021/04/13 09:04:53.945,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
+    <Transaction>2021/04/13 09:29:05.600,C:\GitHub\IncidenciasTic\ProyectoFinal\consultarequipos.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
+    <Transaction>2021/04/13 09:29:05.600,C:\GitHub\IncidenciasTic\ProyectoFinal\consultarequipos.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

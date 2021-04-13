@@ -27,6 +27,9 @@ type
     btnVolver: TButton;
     imgMove: TImage;
     btnAlta: TButton;
+    cbxColumna: TComboBox;
+    txtValue: TEdit;
+    btnLocalizar: TButton;
     procedure FormActivate(Sender: TObject);
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
@@ -40,6 +43,8 @@ type
     procedure imgMoveClick(Sender: TObject);
     procedure btnAltaClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure cbxColumnaChange(Sender: TObject);
+    procedure btnLocalizarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,13 +65,41 @@ begin
     xaltasEquipo.showmodal;
 end;
 
+procedure Txgestionequipo.btnLocalizarClick(Sender: TObject);
+begin
+    if not xdatos.tEquipos.Locate(cbxColumna.Text,txtValue.Text) then
+    begin
+        ShowMessage('No se ha encontrado ningun registro');
+    end;
+
+end;
+
 procedure Txgestionequipo.btnVolverClick(Sender: TObject);
 begin
   ModalResult:=mrok;
 end;
 
+procedure Txgestionequipo.cbxColumnaChange(Sender: TObject);
+begin
+        if cbxColumna.Text='id' then
+        begin
+           txtValue.NumbersOnly:=true;
+           txtValue.Text:='';
+        end
+        else
+        begin
+            txtValue.NumbersOnly:=false;
+            txtValue.Text:='';
+        end;
+end;
+
 procedure Txgestionequipo.FormActivate(Sender: TObject);
 begin
+
+    txtValue.Text:='';
+    txtValue.NumbersOnly:=true;
+    cbxColumna.ItemIndex:=0;
+
     xdatos.tEquipos.Open();
 
     if not xdatos.tEquipos.Eof then
