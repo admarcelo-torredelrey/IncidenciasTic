@@ -36,7 +36,7 @@ object xconsultarIncidencias: TxconsultarIncidencias
   end
   object gridIncidencias: TDBGrid
     Left = 24
-    Top = 176
+    Top = 168
     Width = 705
     Height = 209
     DataSource = xdatos.dsqueryIncidencia

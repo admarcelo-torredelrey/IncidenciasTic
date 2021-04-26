@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs,datos, Data.DB, Vcl.Imaging.pngimage,
-  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls;
+  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,consultarequipos;
 
 type
   Txgestionequipo = class(TForm)
@@ -30,6 +30,7 @@ type
     cbxColumna: TComboBox;
     txtValue: TEdit;
     btnLocalizar: TButton;
+    btnaConsultarEquipos: TButton;
     procedure FormActivate(Sender: TObject);
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
@@ -45,6 +46,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cbxColumnaChange(Sender: TObject);
     procedure btnLocalizarClick(Sender: TObject);
+    procedure btnaConsultarEquiposClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -59,6 +61,11 @@ implementation
 {$R *.dfm}
 
 uses trasladoequipo, altasequipo, menuprincipal;
+
+procedure Txgestionequipo.btnaConsultarEquiposClick(Sender: TObject);
+begin
+    xconsultarEquipo.ShowModal;
+end;
 
 procedure Txgestionequipo.btnAltaClick(Sender: TObject);
 begin

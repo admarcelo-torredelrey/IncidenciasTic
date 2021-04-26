@@ -11,6 +11,7 @@ object xconsultarEquipo: TxconsultarEquipo
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object gridEquipos: TDBGrid
@@ -67,28 +68,26 @@ object xconsultarEquipo: TxconsultarEquipo
     OnClick = btnVolverClick
   end
   object cbxColumna: TComboBox
-    Left = 72
+    Left = 136
     Top = 48
     Width = 145
     Height = 21
-    ItemIndex = 0
     TabOrder = 2
-    Text = 'descripcion'
+    Text = 'ubicacion'
+    OnChange = cbxColumnaChange
     Items.Strings = (
-      'descripcion'
       'ubicacion'
       'fecha')
   end
-  object cbxValue: TComboBox
-    Left = 248
+  object cbxUbicacion: TComboBox
+    Left = 306
     Top = 48
     Width = 145
     Height = 21
     TabOrder = 3
-    Text = 'ComboBox1'
   end
   object dtFecha: TDateTimePicker
-    Left = 424
+    Left = 488
     Top = 48
     Width = 153
     Height = 21
@@ -103,6 +102,7 @@ object xconsultarEquipo: TxconsultarEquipo
     Height = 25
     Caption = 'Filtrar'
     TabOrder = 5
+    OnClick = btnFiltrarClick
   end
   object btnReiniciar: TButton
     Left = 376

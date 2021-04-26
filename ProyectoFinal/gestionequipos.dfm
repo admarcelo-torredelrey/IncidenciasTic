@@ -3362,4 +3362,13 @@ object xgestionequipo: Txgestionequipo
     TabOrder = 9
     OnClick = btnLocalizarClick
   end
+  object btnaConsultarEquipos: TButton
+    Left = 590
+    Top = 40
+    Width = 131
+    Height = 49
+    Caption = 'Consultar Equipos'
+    TabOrder = 10
+    OnClick = btnaConsultarEquiposClick
+  end
 end
