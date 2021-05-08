@@ -31,6 +31,7 @@ type
     txtValue: TEdit;
     btnLocalizar: TButton;
     btnaConsultarEquipos: TButton;
+    btnConsultarTraslados: TButton;
     procedure FormActivate(Sender: TObject);
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
@@ -47,6 +48,7 @@ type
     procedure cbxColumnaChange(Sender: TObject);
     procedure btnLocalizarClick(Sender: TObject);
     procedure btnaConsultarEquiposClick(Sender: TObject);
+    procedure btnConsultarTrasladosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,7 +62,7 @@ implementation
 
 {$R *.dfm}
 
-uses trasladoequipo, altasequipo, menuprincipal;
+uses trasladoequipo, altasequipo, menuprincipal, consultartraslados;
 
 procedure Txgestionequipo.btnaConsultarEquiposClick(Sender: TObject);
 begin
@@ -70,6 +72,11 @@ end;
 procedure Txgestionequipo.btnAltaClick(Sender: TObject);
 begin
     xaltasEquipo.showmodal;
+end;
+
+procedure Txgestionequipo.btnConsultarTrasladosClick(Sender: TObject);
+begin
+  xconsultarTraslados.showmodal;
 end;
 
 procedure Txgestionequipo.btnLocalizarClick(Sender: TObject);

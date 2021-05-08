@@ -56,13 +56,13 @@ begin
     begin
          xdatos.queryEquipos.SQL.Text:= xdatos.queryEquipos.sql.Text+' ubicacion =:ubicacion';
          xdatos.queryEquipos.ParamByName('ubicacion').AsString:=cbxUbicacion.Text;
-         ShowMessage(xdatos.queryEquipos.SQL.Text);
+
     end
     else
     begin
         xdatos.queryEquipos.SQL.Text:= xdatos.queryEquipos.sql.Text+' fecha =:fecha';
         xdatos.queryEquipos.ParamByName('fecha').AsDate:=dtFecha.DateTime;
-        ShowMessage(xdatos.queryEquipos.SQL.Text);
+
     end;
 
     xdatos.queryEquipos.Open();

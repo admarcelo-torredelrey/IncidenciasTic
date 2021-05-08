@@ -325,6 +325,7 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object queryEquiposnombre: TStringField
       AutoGenerateValue = arDefault
@@ -349,5 +350,45 @@ object xdatos: Txdatos
       FieldName = 'fecha'
       Origin = 'fecha'
     end
+  end
+  object queryTraslados: TFDQuery
+    Connection = dbincidencias
+    SQL.Strings = (
+      'select * from traslado')
+    Left = 152
+    Top = 304
+    object queryTrasladosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object queryTrasladosequipo: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'equipo'
+      Origin = 'equipo'
+      Size = 50
+    end
+    object queryTrasladosorigen: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'origen'
+      Origin = 'origen'
+      Size = 30
+    end
+    object queryTrasladosdestino: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'destino'
+      Origin = 'destino'
+      Size = 30
+    end
+    object queryTrasladosfecha: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'fecha'
+      Origin = 'fecha'
+    end
+  end
+  object dsqueryTraslado: TDataSource
+    DataSet = queryTraslados
+    Left = 232
+    Top = 304
   end
 end

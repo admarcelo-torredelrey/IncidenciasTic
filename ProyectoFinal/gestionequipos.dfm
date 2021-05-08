@@ -3371,4 +3371,13 @@ object xgestionequipo: Txgestionequipo
     TabOrder = 10
     OnClick = btnaConsultarEquiposClick
   end
+  object btnConsultarTraslados: TButton
+    Left = 425
+    Top = 112
+    Width = 136
+    Height = 33
+    Caption = 'Consultar Traslados'
+    TabOrder = 11
+    OnClick = btnConsultarTrasladosClick
+  end
 end

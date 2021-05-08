@@ -69,6 +69,13 @@ type
     queryEquiposdescripcion: TStringField;
     queryEquiposubicacion: TStringField;
     queryEquiposfecha: TDateField;
+    queryTraslados: TFDQuery;
+    dsqueryTraslado: TDataSource;
+    queryTrasladosid: TFDAutoIncField;
+    queryTrasladosequipo: TStringField;
+    queryTrasladosorigen: TStringField;
+    queryTrasladosdestino: TStringField;
+    queryTrasladosfecha: TDateField;
   private
     { Private declarations }
   public
