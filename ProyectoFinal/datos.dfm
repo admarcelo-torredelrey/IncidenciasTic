@@ -361,6 +361,7 @@ object xdatos: Txdatos
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object queryTrasladosequipo: TStringField
       AutoGenerateValue = arDefault

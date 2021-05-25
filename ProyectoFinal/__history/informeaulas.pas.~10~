@@ -1,0 +1,30 @@
+unit informeaulas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, QuickRpt, QRCtrls, Vcl.ExtCtrls,datos,
+  Data.DB, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TxInformeAulas = class(TForm)
+    QuickRep1: TQuickRep;
+    bandDetalle: TQRBand;
+    txtNombre: TQRDBText;
+    QRDBText1: TQRDBText;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  xInformeAulas: TxInformeAulas;
+
+implementation
+
+{$R *.dfm}
+
+
+end.

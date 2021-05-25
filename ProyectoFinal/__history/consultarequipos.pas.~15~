@@ -54,13 +54,15 @@ begin
 
     if cbxColumna.Text='ubicacion' then
     begin
-         xdatos.queryEquipos.SQL.Text:= xdatos.queryAulas.sql.Text+' ubicacion=?ubicacion';
+         xdatos.queryEquipos.SQL.Text:= xdatos.queryEquipos.sql.Text+' ubicacion =:ubicacion';
          xdatos.queryEquipos.ParamByName('ubicacion').AsString:=cbxUbicacion.Text;
+
     end
     else
     begin
-        xdatos.queryEquipos.SQL.Text:= xdatos.queryAulas.sql.Text+' fecha=?fecha';
-        xdatos.queryEquipos.ParamByName('fecha').AsDateTime:=dtFecha.DateTime;
+        xdatos.queryEquipos.SQL.Text:= xdatos.queryEquipos.sql.Text+' fecha =:fecha';
+        xdatos.queryEquipos.ParamByName('fecha').AsDate:=dtFecha.DateTime;
+
     end;
 
     xdatos.queryEquipos.Open();
@@ -74,6 +76,7 @@ begin
     xdatos.queryEquipos.Close;
     xdatos.queryEquipos.SQL.Text:='Select * from equipamento';
     xdatos.queryEquipos.Open();
+    PRIMERAVEZ:=true;
 end;
 
 procedure TxconsultarEquipo.btnVolverClick(Sender: TObject);
@@ -107,10 +110,16 @@ end;
 
 procedure TxconsultarEquipo.FormActivate(Sender: TObject);
 begin
+    xdatos.queryEquipos.Close;
+    xdatos.queryEquipos.SQL.Text:='Select * from equipamento';
+    xdatos.queryEquipos.Open();
     PRIMERAVEZ:=True;
     xdatos.tAulas.Open();
     xdatos.tAulas.First;
     cbxUbicacion.Items.Clear;
+    cbxUbicacion.Enabled:=True;
+    cbxColumna.ItemIndex:=0;
+    dtFecha.Enabled:=false;
 
     while not xdatos.tAulas.Eof do
     begin

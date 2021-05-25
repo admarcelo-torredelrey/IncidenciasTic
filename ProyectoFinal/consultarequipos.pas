@@ -16,11 +16,13 @@ type
     dtFecha: TDateTimePicker;
     btnFiltrar: TButton;
     btnReiniciar: TButton;
+    btnInforme: TButton;
     procedure btnVolverClick(Sender: TObject);
     procedure btnReiniciarClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure cbxColumnaChange(Sender: TObject);
     procedure btnFiltrarClick(Sender: TObject);
+    procedure btnInformeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +36,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses informeequipo;
 
 procedure TxconsultarEquipo.btnFiltrarClick(Sender: TObject);
 begin
@@ -69,6 +73,11 @@ begin
 
 
 
+end;
+
+procedure TxconsultarEquipo.btnInformeClick(Sender: TObject);
+begin
+  xinformeequipo.informe.Preview;
 end;
 
 procedure TxconsultarEquipo.btnReiniciarClick(Sender: TObject);

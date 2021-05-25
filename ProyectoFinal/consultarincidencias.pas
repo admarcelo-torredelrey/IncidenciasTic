@@ -20,11 +20,13 @@ type
     Button1: TButton;
     Button2: TButton;
     btnVolver: TButton;
+    btnInforme: TButton;
     procedure FormActivate(Sender: TObject);
     procedure btnVolverClick(Sender: TObject);
     procedure cbxColumnaChange(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure btnInformeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +40,13 @@ var
 implementation
 
 {$R *.dfm}
+
+uses informeincidencias;
+
+procedure TxconsultarIncidencias.btnInformeClick(Sender: TObject);
+begin
+    xinformeincidencia.informe.Preview;
+end;
 
 procedure TxconsultarIncidencias.btnVolverClick(Sender: TObject);
 begin

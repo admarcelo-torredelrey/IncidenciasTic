@@ -16,7 +16,11 @@ uses
   consultaraulas in 'consultaraulas.pas' {xconsultaraulas},
   consultarincidencias in 'consultarincidencias.pas' {xconsultarIncidencias},
   consultarequipos in 'consultarequipos.pas' {xconsultarEquipo},
-  consultartraslados in 'consultartraslados.pas' {xconsultarTraslados};
+  consultartraslados in 'consultartraslados.pas' {xconsultarTraslados},
+  informeaulas in 'informeaulas.pas' {xInformeAulas},
+  informetraslado in 'informetraslado.pas' {xinformetraslado},
+  informeincidencias in 'informeincidencias.pas' {xinformeincidencia},
+  informeequipo in 'informeequipo.pas' {xinformeequipo};
 
 {$R *.res}
 
@@ -38,5 +42,9 @@ begin
   Application.CreateForm(TxconsultarIncidencias, xconsultarIncidencias);
   Application.CreateForm(TxconsultarEquipo, xconsultarEquipo);
   Application.CreateForm(TxconsultarTraslados, xconsultarTraslados);
+  Application.CreateForm(TxInformeAulas, xInformeAulas);
+  Application.CreateForm(Txinformetraslado, xinformetraslado);
+  Application.CreateForm(Txinformeincidencia, xinformeincidencia);
+  Application.CreateForm(Txinformeequipo, xinformeequipo);
   Application.Run;
 end.

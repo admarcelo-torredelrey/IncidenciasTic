@@ -2245,11 +2245,17 @@ object xmainmenu: Txmainmenu
     OnClick = btnIncidenciasClick
   end
   object btnEquipos: TButton
-    Left = 280
-    Top = 240
-    Width = 75
-    Height = 25
+    Left = 56
+    Top = 192
+    Width = 337
+    Height = 44
     Caption = 'Gestion Equipos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
     OnClick = btnEquiposClick
   end

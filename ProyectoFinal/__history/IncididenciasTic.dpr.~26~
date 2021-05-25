@@ -11,7 +11,15 @@ uses
   gestionequipos in 'gestionequipos.pas' {xgestionequipo},
   trasladoequipo in 'trasladoequipo.pas' {xTraslado},
   gestionincidencias in 'gestionincidencias.pas' {xgestionIncidencias},
-  altasequipo in 'altasequipo.pas' {xaltasEquipo};
+  altasequipo in 'altasequipo.pas' {xaltasEquipo},
+  altaincidencias in 'altaincidencias.pas' {xaltaIncidencias},
+  consultaraulas in 'consultaraulas.pas' {xconsultaraulas},
+  consultarincidencias in 'consultarincidencias.pas' {xconsultarIncidencias},
+  consultarequipos in 'consultarequipos.pas' {xconsultarEquipo},
+  consultartraslados in 'consultartraslados.pas' {xconsultarTraslados},
+  informeaulas in 'informeaulas.pas' {xInformeAulas},
+  informetraslado in 'informetraslado.pas' {xinformetraslado},
+  informeincidencias in 'informeincidencias.pas' {xinformeincidencia};
 
 {$R *.res}
 
@@ -28,5 +36,13 @@ begin
   Application.CreateForm(TxTraslado, xTraslado);
   Application.CreateForm(TxgestionIncidencias, xgestionIncidencias);
   Application.CreateForm(TxaltasEquipo, xaltasEquipo);
+  Application.CreateForm(TxaltaIncidencias, xaltaIncidencias);
+  Application.CreateForm(Txconsultaraulas, xconsultaraulas);
+  Application.CreateForm(TxconsultarIncidencias, xconsultarIncidencias);
+  Application.CreateForm(TxconsultarEquipo, xconsultarEquipo);
+  Application.CreateForm(TxconsultarTraslados, xconsultarTraslados);
+  Application.CreateForm(TxInformeAulas, xInformeAulas);
+  Application.CreateForm(Txinformetraslado, xinformetraslado);
+  Application.CreateForm(Txinformeincidencia, xinformeincidencia);
   Application.Run;
 end.
