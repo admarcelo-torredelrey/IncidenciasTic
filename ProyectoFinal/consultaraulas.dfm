@@ -1,9 +1,11 @@
 object xconsultaraulas: Txconsultaraulas
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Consultar Altas'
-  ClientHeight = 308
-  ClientWidth = 578
+  ClientHeight = 400
+  ClientWidth = 746
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,15 +17,15 @@ object xconsultaraulas: Txconsultaraulas
   PixelsPerInch = 96
   TextHeight = 13
   object txtValor: TEdit
-    Left = 152
-    Top = 19
+    Left = 254
+    Top = 35
     Width = 121
     Height = 21
     TabOrder = 0
   end
   object cbxColumna: TComboBox
-    Left = 16
-    Top = 19
+    Left = 118
+    Top = 35
     Width = 113
     Height = 21
     ItemIndex = 0
@@ -36,8 +38,8 @@ object xconsultaraulas: Txconsultaraulas
       'ubicacion')
   end
   object cbxUbicacion: TComboBox
-    Left = 304
-    Top = 19
+    Left = 406
+    Top = 35
     Width = 145
     Height = 21
     TabOrder = 2
@@ -48,7 +50,7 @@ object xconsultaraulas: Txconsultaraulas
   end
   object btnFiltro: TButton
     Left = 198
-    Top = 62
+    Top = 70
     Width = 75
     Height = 25
     Caption = 'Filtrar'
@@ -56,10 +58,10 @@ object xconsultaraulas: Txconsultaraulas
     OnClick = btnFiltroClick
   end
   object gridAula: TDBGrid
-    Left = 64
+    Left = 24
     Top = 112
-    Width = 449
-    Height = 169
+    Width = 681
+    Height = 257
     DataSource = xdatos.dsqueryAula
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
@@ -69,8 +71,8 @@ object xconsultaraulas: Txconsultaraulas
     TitleFont.Style = []
   end
   object btnVolver: TButton
-    Left = 482
-    Top = 7
+    Left = 649
+    Top = -1
     Width = 95
     Height = 41
     Caption = 'Volver'
@@ -80,20 +82,20 @@ object xconsultaraulas: Txconsultaraulas
   end
   object btnReiniciar: TButton
     Left = 304
-    Top = 62
+    Top = 70
     Width = 75
     Height = 25
     Caption = 'Reiniciar'
     TabOrder = 6
     OnClick = btnReiniciarClick
   end
-  object Button1: TButton
-    Left = 438
-    Top = 62
+  object btnInforme: TButton
+    Left = 406
+    Top = 70
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = 'Informe'
     TabOrder = 7
-    OnClick = Button1Click
+    OnClick = btnInformeClick
   end
 end

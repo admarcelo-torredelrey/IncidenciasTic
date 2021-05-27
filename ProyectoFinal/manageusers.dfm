@@ -1,9 +1,11 @@
 object xmanageusers: Txmanageusers
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Gesti'#243'n Usuarios'
-  ClientHeight = 387
-  ClientWidth = 734
+  ClientHeight = 397
+  ClientWidth = 744
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clTeal

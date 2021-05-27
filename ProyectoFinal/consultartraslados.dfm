@@ -1,9 +1,11 @@
 object xconsultarTraslados: TxconsultarTraslados
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Consultar Traslados'
-  ClientHeight = 363
-  ClientWidth = 759
+  ClientHeight = 386
+  ClientWidth = 769
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +17,8 @@ object xconsultarTraslados: TxconsultarTraslados
   PixelsPerInch = 96
   TextHeight = 13
   object cbxColumna: TComboBox
-    Left = 32
-    Top = 56
+    Left = 112
+    Top = 32
     Width = 145
     Height = 21
     ItemIndex = 0
@@ -30,15 +32,15 @@ object xconsultarTraslados: TxconsultarTraslados
       'fecha')
   end
   object cbxValor: TComboBox
-    Left = 248
-    Top = 56
+    Left = 280
+    Top = 32
     Width = 145
     Height = 21
     TabOrder = 1
   end
   object dtFecha: TDateTimePicker
-    Left = 456
-    Top = 56
+    Left = 448
+    Top = 32
     Width = 186
     Height = 21
     Date = 44324.000000000000000000
@@ -56,8 +58,8 @@ object xconsultarTraslados: TxconsultarTraslados
     OnClick = btnVolverClick
   end
   object btnReiniciar: TButton
-    Left = 408
-    Top = 96
+    Left = 350
+    Top = 72
     Width = 75
     Height = 25
     Caption = 'Reiniciar'
@@ -65,8 +67,8 @@ object xconsultarTraslados: TxconsultarTraslados
     OnClick = btnReiniciarClick
   end
   object btnFiltrar: TButton
-    Left = 240
-    Top = 96
+    Left = 232
+    Top = 72
     Width = 75
     Height = 25
     Caption = 'Filtrar'
@@ -74,10 +76,10 @@ object xconsultarTraslados: TxconsultarTraslados
     OnClick = btnFiltrarClick
   end
   object gridTraslados: TDBGrid
-    Left = 8
-    Top = 143
-    Width = 737
-    Height = 212
+    Left = 24
+    Top = 112
+    Width = 705
+    Height = 243
     DataSource = xdatos.dsqueryTraslado
     TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
@@ -118,8 +120,8 @@ object xconsultarTraslados: TxconsultarTraslados
       end>
   end
   object btnInforme: TButton
-    Left = 567
-    Top = 96
+    Left = 471
+    Top = 72
     Width = 75
     Height = 25
     Caption = 'Informe'

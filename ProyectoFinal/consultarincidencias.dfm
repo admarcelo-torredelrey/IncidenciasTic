@@ -1,9 +1,11 @@
 object xconsultarIncidencias: TxconsultarIncidencias
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Consultar Incidencias'
-  ClientHeight = 404
-  ClientWidth = 755
+  ClientHeight = 397
+  ClientWidth = 765
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,20 +17,20 @@ object xconsultarIncidencias: TxconsultarIncidencias
   PixelsPerInch = 96
   TextHeight = 13
   object lblProfesor: TLabel
-    Left = 240
+    Left = 248
     Top = 37
     Width = 41
     Height = 13
     Caption = 'Profesor'
   end
   object lblValue: TLabel
-    Left = 384
+    Left = 392
     Top = 37
     Width = 3
     Height = 13
   end
   object lblFecha: TLabel
-    Left = 543
+    Left = 551
     Top = 37
     Width = 29
     Height = 13
@@ -36,7 +38,7 @@ object xconsultarIncidencias: TxconsultarIncidencias
   end
   object gridIncidencias: TDBGrid
     Left = 24
-    Top = 168
+    Top = 160
     Width = 705
     Height = 209
     DataSource = xdatos.dsqueryIncidencia
@@ -85,14 +87,14 @@ object xconsultarIncidencias: TxconsultarIncidencias
       end>
   end
   object txtProfesor: TEdit
-    Left = 240
+    Left = 248
     Top = 56
     Width = 113
     Height = 21
     TabOrder = 1
   end
   object cbxColumna: TComboBox
-    Left = 72
+    Left = 80
     Top = 56
     Width = 129
     Height = 21
@@ -108,14 +110,14 @@ object xconsultarIncidencias: TxconsultarIncidencias
       'estado')
   end
   object cbxValue: TComboBox
-    Left = 384
+    Left = 392
     Top = 56
     Width = 129
     Height = 21
     TabOrder = 3
   end
   object dtFecha: TDateTimePicker
-    Left = 543
+    Left = 551
     Top = 56
     Width = 138
     Height = 21
@@ -124,8 +126,8 @@ object xconsultarIncidencias: TxconsultarIncidencias
     TabOrder = 4
   end
   object Button1: TButton
-    Left = 270
-    Top = 120
+    Left = 246
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'Filtrar'
@@ -133,8 +135,8 @@ object xconsultarIncidencias: TxconsultarIncidencias
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 376
-    Top = 120
+    Left = 352
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'Reiniciar'
@@ -152,8 +154,8 @@ object xconsultarIncidencias: TxconsultarIncidencias
     OnClick = btnVolverClick
   end
   object btnInforme: TButton
-    Left = 481
-    Top = 120
+    Left = 457
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'Informe'

@@ -56,11 +56,11 @@
     <Transaction>2021/05/24 15:48:58.000.551,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
     <Transaction>2021/05/24 16:08:58.000.546,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\informetraslado.pas</Transaction>
     <Transaction>2021/05/24 16:08:58.000.546,C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\informetraslado.dfm</Transaction>
-    <Transaction>2021/05/25 13:21:01.798,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
-    <Transaction>2021/05/25 14:05:03.413,C:\GitHub\IncidenciasTic\ProyectoFinal\informeincidencias.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
-    <Transaction>2021/05/25 14:05:03.413,C:\GitHub\IncidenciasTic\ProyectoFinal\informeincidencias.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
-    <Transaction>2021/05/25 14:16:05.278,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
-    <Transaction>2021/05/25 14:26:20.227,C:\GitHub\IncidenciasTic\ProyectoFinal\informeequipo.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
-    <Transaction>2021/05/25 14:26:20.227,C:\GitHub\IncidenciasTic\ProyectoFinal\informeequipo.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
+    <Transaction>2021/05/25 13:21:01.000.798,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 14:05:03.000.413,C:\GitHub\IncidenciasTic\ProyectoFinal\informeincidencias.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
+    <Transaction>2021/05/25 14:05:03.000.413,C:\GitHub\IncidenciasTic\ProyectoFinal\informeincidencias.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 14:16:05.000.278,=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 14:26:20.000.227,C:\GitHub\IncidenciasTic\ProyectoFinal\informeequipo.pas=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 14:26:20.000.227,C:\GitHub\IncidenciasTic\ProyectoFinal\informeequipo.dfm=C:\GitHub\IncidenciasTic\ProyectoFinal\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

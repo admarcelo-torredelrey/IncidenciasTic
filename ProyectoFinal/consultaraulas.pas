@@ -16,13 +16,13 @@ type
     gridAula: TDBGrid;
     btnVolver: TButton;
     btnReiniciar: TButton;
-    Button1: TButton;
+    btnInforme: TButton;
     procedure cbxColumnaChange(Sender: TObject);
     procedure btnVolverClick(Sender: TObject);
     procedure btnFiltroClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnReiniciarClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnInformeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -98,7 +98,7 @@ begin
     ModalResult:=mrok;
 end;
 
-procedure Txconsultaraulas.Button1Click(Sender: TObject);
+procedure Txconsultaraulas.btnInformeClick(Sender: TObject);
 begin
     xinformeaulas.QuickRep1.Preview;
 end;

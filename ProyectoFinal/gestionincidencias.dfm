@@ -1,9 +1,11 @@
 object xgestionIncidencias: TxgestionIncidencias
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Gesti'#243'n De Incidencias'
-  ClientHeight = 497
-  ClientWidth = 830
+  ClientHeight = 501
+  ClientWidth = 832
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -2941,8 +2943,8 @@ object xgestionIncidencias: TxgestionIncidencias
     ParentFont = False
   end
   object lblValor: TLabel
-    Left = 424
-    Top = 211
+    Left = 487
+    Top = 138
     Width = 11
     Height = 16
     Caption = 'Id'
@@ -2954,10 +2956,10 @@ object xgestionIncidencias: TxgestionIncidencias
     ParentFont = False
   end
   object gridIncidencias: TDBGrid
-    Left = 279
-    Top = 272
+    Left = 281
+    Top = 166
     Width = 543
-    Height = 217
+    Height = 323
     DataSource = xdatos.dsIncidencias
     ReadOnly = True
     TabOrder = 0
@@ -3057,25 +3059,25 @@ object xgestionIncidencias: TxgestionIncidencias
     OnClick = btnVolverClick
   end
   object btnAlta: TButton
-    Left = 352
-    Top = 80
-    Width = 113
-    Height = 57
-    Caption = 'ALTA'
+    Left = 392
+    Top = 56
+    Width = 129
+    Height = 25
+    Caption = 'Nueva Incidencia'
     TabOrder = 7
     OnClick = btnAltaClick
   end
   object txtValor: TEdit
-    Left = 448
-    Top = 210
+    Left = 511
+    Top = 137
     Width = 121
     Height = 21
     NumbersOnly = True
     TabOrder = 8
   end
   object Button1: TButton
-    Left = 608
-    Top = 208
+    Left = 671
+    Top = 135
     Width = 75
     Height = 25
     Caption = 'Localizar'
@@ -3083,11 +3085,11 @@ object xgestionIncidencias: TxgestionIncidencias
     OnClick = Button1Click
   end
   object btnConsultar: TButton
-    Left = 568
-    Top = 80
+    Left = 563
+    Top = 56
     Width = 129
-    Height = 57
-    Caption = 'CONSULTAR'
+    Height = 25
+    Caption = 'Consultar Incidencias'
     TabOrder = 10
     OnClick = btnConsultarClick
   end

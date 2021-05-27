@@ -1,9 +1,11 @@
 object xaltaIncidencias: TxaltaIncidencias
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Alta Incidencias'
-  ClientHeight = 265
-  ClientWidth = 566
+  ClientHeight = 275
+  ClientWidth = 576
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

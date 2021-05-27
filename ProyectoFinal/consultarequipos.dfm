@@ -1,9 +1,11 @@
 object xconsultarEquipo: TxconsultarEquipo
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Consultar Equipo'
-  ClientHeight = 404
-  ClientWidth = 750
+  ClientHeight = 392
+  ClientWidth = 760
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,9 +17,9 @@ object xconsultarEquipo: TxconsultarEquipo
   PixelsPerInch = 96
   TextHeight = 13
   object gridEquipos: TDBGrid
-    Left = 40
-    Top = 160
-    Width = 681
+    Left = 24
+    Top = 136
+    Width = 697
     Height = 225
     DataSource = xdatos.dsqueryEquipo
     TabOrder = 0
@@ -53,7 +55,7 @@ object xconsultarEquipo: TxconsultarEquipo
       item
         Expanded = False
         FieldName = 'fecha'
-        Width = 100
+        Width = 123
         Visible = True
       end>
   end
@@ -96,8 +98,8 @@ object xconsultarEquipo: TxconsultarEquipo
     TabOrder = 4
   end
   object btnFiltrar: TButton
-    Left = 256
-    Top = 112
+    Left = 232
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'Filtrar'
@@ -105,8 +107,8 @@ object xconsultarEquipo: TxconsultarEquipo
     OnClick = btnFiltrarClick
   end
   object btnReiniciar: TButton
-    Left = 376
-    Top = 112
+    Left = 352
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'Reiniciar'
@@ -114,8 +116,8 @@ object xconsultarEquipo: TxconsultarEquipo
     OnClick = btnReiniciarClick
   end
   object btnInforme: TButton
-    Left = 488
-    Top = 112
+    Left = 464
+    Top = 88
     Width = 75
     Height = 25
     Caption = 'Informe'

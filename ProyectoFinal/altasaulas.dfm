@@ -1,9 +1,11 @@
 object xAltasAulas: TxAltasAulas
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Altas Aulas'
-  ClientHeight = 160
-  ClientWidth = 482
+  ClientHeight = 170
+  ClientWidth = 492
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -76,8 +78,8 @@ object xAltasAulas: TxAltasAulas
     OnClick = btnCrearAulaClick
   end
   object btnVolver: TButton
-    Left = 376
-    Top = -8
+    Left = 384
+    Top = 0
     Width = 110
     Height = 41
     Caption = 'Volver'

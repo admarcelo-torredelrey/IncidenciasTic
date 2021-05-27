@@ -1,9 +1,11 @@
 object xgestionequipo: Txgestionequipo
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Gesti'#243'n Equipos'
-  ClientHeight = 462
-  ClientWidth = 880
+  ClientHeight = 472
+  ClientWidth = 890
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -3235,9 +3237,9 @@ object xgestionequipo: Txgestionequipo
   end
   object gridEquipos: TDBGrid
     Left = 331
-    Top = 269
+    Top = 173
     Width = 541
-    Height = 185
+    Height = 281
     DataSource = xdatos.dsEquipos
     ReadOnly = True
     TabOrder = 0
@@ -3325,17 +3327,17 @@ object xgestionequipo: Txgestionequipo
     OnClick = btnVolverClick
   end
   object btnAlta: TButton
-    Left = 376
+    Left = 403
     Top = 40
     Width = 145
-    Height = 49
-    Caption = 'ALTA'
+    Height = 25
+    Caption = 'Nuevo Equipo'
     TabOrder = 6
     OnClick = btnAltaClick
   end
   object cbxColumna: TComboBox
-    Left = 379
-    Top = 224
+    Left = 411
+    Top = 144
     Width = 121
     Height = 21
     ItemIndex = 0
@@ -3347,15 +3349,15 @@ object xgestionequipo: Txgestionequipo
       'nombre')
   end
   object txtValue: TEdit
-    Left = 544
-    Top = 224
+    Left = 576
+    Top = 144
     Width = 121
     Height = 21
     TabOrder = 8
   end
   object btnLocalizar: TButton
-    Left = 712
-    Top = 222
+    Left = 744
+    Top = 142
     Width = 75
     Height = 25
     Caption = 'Localizar'
@@ -3363,19 +3365,19 @@ object xgestionequipo: Txgestionequipo
     OnClick = btnLocalizarClick
   end
   object btnaConsultarEquipos: TButton
-    Left = 590
+    Left = 603
     Top = 40
-    Width = 131
-    Height = 49
+    Width = 145
+    Height = 25
     Caption = 'Consultar Equipos'
     TabOrder = 10
     OnClick = btnaConsultarEquiposClick
   end
   object btnConsultarTraslados: TButton
-    Left = 425
-    Top = 112
-    Width = 136
-    Height = 33
+    Left = 403
+    Top = 85
+    Width = 145
+    Height = 25
     Caption = 'Consultar Traslados'
     TabOrder = 11
     OnClick = btnConsultarTrasladosClick
