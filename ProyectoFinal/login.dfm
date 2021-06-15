@@ -3,7 +3,7 @@ object xlogin: Txlogin
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  Caption = 'LOGIN'
+  Caption = 'Inicio de sesi'#243'n'
   ClientHeight = 429
   ClientWidth = 377
   Color = clWhite

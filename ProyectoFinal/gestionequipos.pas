@@ -118,7 +118,7 @@ begin
 
     if not xdatos.tEquipos.Eof then
     begin
-
+    xdatos.tEquipos.First;
     txtNombre.Text:=xdatos.tEquiposnombre.Value;
     txtDescripcion.Text:=xdatos.tEquiposdescripcion.Value;
     txtUbicacion.Text:=xdatos.tEquiposubicacion.Value;
@@ -183,10 +183,11 @@ end;
 
 procedure Txgestionequipo.imgPostClick(Sender: TObject);
 begin
-
-
-
-  if (txtNombre.Text='') or (txtDescripcion.Text='') then
+  if xdatos.tEquipos.Eof then
+  begin
+       ShowMessage('No existe ningun registro');
+  end
+  else if (txtNombre.Text='') or (txtDescripcion.Text='') then
   begin
        ShowMessage('No puede estar vacio, el nombre o la descripción');
   end

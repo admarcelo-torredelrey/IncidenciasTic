@@ -75,6 +75,7 @@ procedure TxaltaIncidencias.FormActivate(Sender: TObject);
 begin
     //rellenamos los combobox con las aulas y los equipamentos
 
+      xdatos.tIncidencias.Open();
       xdatos.tAulas.Open();
       xdatos.tEquipos.Open();
 

@@ -98,32 +98,15 @@ begin
 end;
 
 procedure TxgestionIncidencias.FormActivate(Sender: TObject);
-var
-USERID : Integer;
-usertype : String;
+
 begin
-       USERID:=strtoint(xmainmenu.lblid.caption);
 
-       if xdatos.tUsuario.Locate('id',USERID) then
-       begin
-         usertype:=xdatos.tUsuariotipo.value;
-       end;
-
-
-       //Si el usuario es administrador, se habilita el cambiar
-       if usertype='Admin' then
-       begin
-          cbxEstado.enabled:=true;
-       end
-       else
-       begin
-         cbxEstado.enabled:=false;
-       end;
 
       xdatos.tIncidencias.Open();
       xdatos.tIncidencias.First;
       if not xdatos.tIncidencias.Eof then
       begin
+        xdatos.tIncidencias.First;
         cbxAula.Text:=xdatos.tIncidenciasaula.Value;
         cbxEquipo.Text:=xdatos.tIncidenciasequipamiento.Value;
         dtFecha.DateTime:=xdatos.tIncidenciasfecha.Value;
@@ -204,7 +187,11 @@ end;
 
 procedure TxgestionIncidencias.imgPostClick(Sender: TObject);
 begin
-      if (cbxAula.Text='') or (cbxEquipo.Text='') or (txtProfesor.Text='') or (cbxEstado.Text='') then
+      if xdatos.tIncidencias.Eof then
+      begin
+         ShowMessage('No existe ningún registro');
+      end
+      else if (cbxAula.Text='') or (cbxEquipo.Text='') or (txtProfesor.Text='') or (cbxEstado.Text='') then
       begin
         ShowMessage('No puedes dejar campos vacios!');
       end

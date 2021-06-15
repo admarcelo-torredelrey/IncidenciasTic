@@ -17,6 +17,8 @@ type
     btnFiltrar: TButton;
     btnReiniciar: TButton;
     btnInforme: TButton;
+    lblColumna1: TLabel;
+    lblColumna2: TLabel;
     procedure btnVolverClick(Sender: TObject);
     procedure btnReiniciarClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

@@ -16,6 +16,20 @@ object xconsultarEquipo: TxconsultarEquipo
   OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
+  object lblColumna1: TLabel
+    Left = 306
+    Top = 29
+    Width = 45
+    Height = 13
+    Caption = 'Ubicaci'#243'n'
+  end
+  object lblColumna2: TLabel
+    Left = 488
+    Top = 29
+    Width = 29
+    Height = 13
+    Caption = 'Fecha'
+  end
   object gridEquipos: TDBGrid
     Left = 24
     Top = 136

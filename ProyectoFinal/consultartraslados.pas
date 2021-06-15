@@ -17,6 +17,8 @@ type
     btnFiltrar: TButton;
     gridTraslados: TDBGrid;
     btnInforme: TButton;
+    lblColumna1: TLabel;
+    lblColumna2: TLabel;
     procedure btnVolverClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure cbxColumnaChange(Sender: TObject);
@@ -94,6 +96,7 @@ end;
 
 procedure TxconsultarTraslados.cbxColumnaChange(Sender: TObject);
 begin
+
       if cbxColumna.Text='equipo' then
       begin
             xdatos.tEquipos.First;
@@ -110,6 +113,7 @@ begin
 
             cbxValor.Enabled:=true;
             dtFecha.Enabled:=False;
+            lblColumna1.Caption:='Equipo';
 
 
       end
@@ -131,6 +135,7 @@ begin
 
             cbxValor.Enabled:=true;
             dtFecha.Enabled:=False;
+            lblColumna1.Caption:=cbxColumna.Text;
 
 
       end
@@ -179,6 +184,8 @@ begin
 
     cbxValor.Enabled:=true;
     dtFecha.Enabled:=False;
+    cbxColumna.ItemIndex:=0;
+    lblColumna1.Caption:=cbxColumna.Text;
 
 
 

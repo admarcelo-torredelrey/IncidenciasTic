@@ -703,7 +703,7 @@
   end
   object imgPost: TImage
     Left = 183
-    Top = 16
+    Top = 8
     Width = 42
     Height = 41
     Picture.Data = {
@@ -875,7 +875,7 @@
   end
   object imgDelete: TImage
     Left = 231
-    Top = 16
+    Top = 8
     Width = 42
     Height = 41
     Picture.Data = {
@@ -2960,21 +2960,21 @@
   end
   object btnConsultar: TButton
     Left = 592
-    Top = 33
+    Top = 45
     Width = 121
-    Height = 49
-    Caption = 'CONSULTAR'
+    Height = 26
+    Caption = 'Consultar'
     TabOrder = 1
     OnClick = btnConsultarClick
   end
-  object Button1: TButton
-    Left = 400
-    Top = 33
+  object btnNuevaAula: TButton
+    Left = 418
+    Top = 45
     Width = 121
-    Height = 49
-    Caption = 'ALTA'
+    Height = 26
+    Caption = 'Nueva Aula'
     TabOrder = 2
-    OnClick = Button1Click
+    OnClick = btnNuevaAulaClick
   end
   object btnVolver: TButton
     Left = 761

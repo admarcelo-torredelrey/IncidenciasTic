@@ -11,7 +11,7 @@ type
   TxAulas = class(TForm)
     gridAulas: TDBGrid;
     btnConsultar: TButton;
-    Button1: TButton;
+    btnNuevaAula: TButton;
     btnVolver: TButton;
     imgPrior: TImage;
     imgPrevious: TImage;
@@ -29,7 +29,7 @@ type
     lblColumna: TLabel;
     lblValor: TLabel;
     procedure FormActivate(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnNuevaAulaClick(Sender: TObject);
     procedure btnVolverClick(Sender: TObject);
     procedure imgPriorClick(Sender: TObject);
     procedure imgPreviousClick(Sender: TObject);
@@ -80,7 +80,7 @@ begin
     modalResult:=mrok;
 end;
 
-procedure TxAulas.Button1Click(Sender: TObject);
+procedure TxAulas.btnNuevaAulaClick(Sender: TObject);
 begin
     xAltasAulas.showmodal();
 end;
@@ -106,11 +106,13 @@ begin
     xdatos.tAulas.Open();
     if not xdatos.tAulas.Eof then
     begin
+      xdatos.tAulas.First;
       txtNombre.Text:=xdatos.tAulasnombre.Value;
       cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
     end;
     cbxColumna.ItemIndex:=0;
     txtValor.NumbersOnly:=true;
+
 end;
 
 procedure TxAulas.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -125,10 +127,32 @@ begin
 end;
 
 procedure TxAulas.imgDeleteClick(Sender: TObject);
+var
+ aula : String;
 begin
-  xdatos.tAulas.Delete;
-  txtNombre.Text:=xdatos.tAulasnombre.Value;
-  cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
+  if xdatos.tAulasnombre.Value='almacen' then
+  begin
+    ShowMessage('No puedes borrar el aula por defecto');
+  end
+  else
+  begin
+    aula := xdatos.tAulasnombre.Value;
+    xdatos.tAulas.Delete;
+    txtNombre.Text:=xdatos.tAulasnombre.Value;
+    cbxUbicación.Text:=xdatos.tAulasubicacion.Value;
+
+    xdatos.tEquipos.Open();
+
+
+    while xdatos.tEquipos.Locate('ubicacion',aula) do
+    begin
+      xdatos.tEquipos.Edit;
+      xdatos.tEquiposubicacion.Value:='almacen';
+    end;
+
+  end;
+
+
 end;
 
 procedure TxAulas.imgLastClick(Sender: TObject);
@@ -147,8 +171,15 @@ end;
 
 procedure TxAulas.imgPostClick(Sender: TObject);
 begin
-
-  if (txtNombre.Text='') or (cbxUbicación.Text='') then
+  if xdatos.tAulas.Eof then
+  begin
+    ShowMessage('No existe ningún registro');
+  end
+  else if xdatos.tAulasnombre.Value='almacen' then
+  begin
+    ShowMessage('No se puede modificar la opción por defecto');
+  end
+  else if (txtNombre.Text='') or (cbxUbicación.Text='') then
   begin
 
     ShowMessage('No debes dejar campos vacios!');
@@ -156,6 +187,16 @@ begin
   end
   else
   begin
+
+  if txtNombre.Text<>xdatos.tAulasnombre.Value then
+  begin
+    while xdatos.tEquipos.Locate('ubicacion',xdatos.tAulasnombre.Text) do
+    begin
+      xdatos.tEquipos.Edit;
+      xdatos.tEquiposubicacion.Value:=txtNombre.Text;
+    end;
+
+  end;
   xdatos.tAulas.Edit;
   xdatos.tAulasnombre.Value:=txtNombre.Text;
   xdatos.tAulasubicacion.Value:=cbxUbicación.Text;

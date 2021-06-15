@@ -17,6 +17,8 @@ type
     btnVolver: TButton;
     btnReiniciar: TButton;
     btnInforme: TButton;
+    lblColumna1: TLabel;
+    lblColumna2: TLabel;
     procedure cbxColumnaChange(Sender: TObject);
     procedure btnVolverClick(Sender: TObject);
     procedure btnFiltroClick(Sender: TObject);
@@ -111,6 +113,7 @@ begin
       txtValor.Enabled:=true;
       cbxUbicacion.Enabled:=false;
       txtValor.Text:='';
+      lblColumna1.Caption:='Nombre';
     end;
 
     if cbxColumna.Text='id' then
@@ -119,12 +122,14 @@ begin
       txtValor.Enabled:=true;
       cbxUbicacion.Enabled:=false;
       txtValor.Text:='';
+      lblColumna1.Caption:='Id';
     end;
 
     if cbxColumna.Text='ubicacion' then
     begin
       txtValor.Enabled:=false;
       cbxUbicacion.Enabled:=true;
+
     end;
 
 
@@ -140,6 +145,8 @@ begin
     xdatos.queryAulas.SQL.Text:='Select * from aula';
     xdatos.queryAulas.Open();
     PRIMERAVEZ:=true;
+    lblColumna2.Caption:='Ubicación';
+    lblColumna1.Caption:='Id';
 
 
 end;
